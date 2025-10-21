@@ -22,19 +22,21 @@ export const Main = () => {
           </p>
         </FlexWrapper>
       </FlexWrapper>
-      <FlexWrapper justify="center" direction="column" align="center">
-        <StyledFieldSet>
-          <legend>
-            <Icon iconId="quote" height="20px" width="25px" />
-          </legend>
-          <p>With great power comes great electricity bill</p>
-        </StyledFieldSet>
-        <StyledFieldSet>
-          <legend>
-            <Icon iconId="quote" height="20px" width="25px" />
-          </legend>
-          <p>- Dr. Who</p>
-        </StyledFieldSet>
+      <FlexWrapper justify="center" align="center">
+        <FlexWrapper justify="center" direction="column" align="flex-end">
+          <StyledFieldSet>
+            <legend>
+              <Icon iconId="quote" height="30px" width="35px" />
+            </legend>
+            <p>With great power comes great electricity bill</p>
+          </StyledFieldSet>
+          <StyledFieldSet>
+            <legend className="legend-right">
+              <Icon iconId="quoteBlack" height="30px" width="35px" />
+            </legend>
+            <p>- Dr. Who</p>
+          </StyledFieldSet>
+        </FlexWrapper>
       </FlexWrapper>
     </StyledMain>
   );
@@ -48,9 +50,10 @@ const StyledMain = styled.div`
 const StyledFieldSet = styled.fieldset`
   position: relative;
   padding: 10px;
-  legend {
+  .legend-right {
     position: absolute;
     top: -10px;
     right: 5px;
+    border-top: none;
   }
 `;

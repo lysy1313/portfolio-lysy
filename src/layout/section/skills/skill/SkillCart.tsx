@@ -22,7 +22,7 @@ const StyledSkillCart = styled.table`
   border-collapse: collapse;
   border: 1px solid #abb2bf;
   box-sizing: border-box;
-  min-width: 103px;
+  width: 103px;
   tr,
   th {
     border: 1px solid #abb2bf;

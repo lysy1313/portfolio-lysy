@@ -16,6 +16,7 @@ export const SectionTitle = (props: SectionTitlePropsType) => {
 export const StyledSectionTitle = styled.h2`
   color: #fff;
   text-align: center;
+  align-self: flex-start;
   span {
     color: #c778dd;
   }

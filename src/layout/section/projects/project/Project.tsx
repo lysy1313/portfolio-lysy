@@ -38,7 +38,7 @@ const StyledProject = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* gap: 10px; */
+    gap: 10px;
   }
 
   .divBtn {
@@ -52,6 +52,7 @@ const StyledProject = styled.div`
 const Img = styled.img`
   width: 100%;
   height: 200px;
+  object-fit: cover;
   border-bottom: 0.5px solid #fff;
 `;
 const Parag = styled.p`

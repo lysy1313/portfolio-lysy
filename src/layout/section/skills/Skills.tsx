@@ -11,28 +11,30 @@ export const Skills = () => {
 
       <FlexWrapper justify="center" align="center" wrap="wrap">
         <ImgSkill src={ImageSkill} />
-        <StyledSkillDiv>
-          <SkillCart
-            skillType="Languages"
-            skillLang="TypeScript Lua Python JavaScript"
-          />
-          <SkillCart
-            skillType="Databases"
-            skillLang="SQLite PostgreSQL Mongo"
-          />
-          <SkillCart
-            skillType="Tools"
-            skillLang="VSCode Neovim Linux Lua Figma XFCE Arch Git Font Awesome"
-          />
-          <SkillCart
-            skillType="Other"
-            skillLang="HTML CSS EJS SCSS REST Jinja JavaScript"
-          />
-          <SkillCart
-            skillType="Frameworks"
-            skillLang="React Vue Lua Lua Disnake Discord.js JavaScript Flask Express.js"
-          />
-        </StyledSkillDiv>
+        <FlexWrapper justify="space-between" align="center" wrap="wrap">
+          <StyledSkillDiv>
+            <SkillCart
+              skillType="Languages"
+              skillLang="TypeScript Lua Python JavaScript"
+            />
+            <SkillCart
+              skillType="Databases"
+              skillLang="SQLite PostgreSQL Mongo"
+            />
+            <SkillCart
+              skillType="Tools"
+              skillLang="VSCode Neovim Linux Lua Figma XFCE Arch Git Font Awesome"
+            />
+            <SkillCart
+              skillType="Other"
+              skillLang="HTML CSS EJS SCSS REST Jinja JavaScript"
+            />
+            <SkillCart
+              skillType="Frameworks"
+              skillLang="React Vue Lua Lua Disnake Discord.js JavaScript Flask Express.js"
+            />
+          </StyledSkillDiv>
+        </FlexWrapper>
       </FlexWrapper>
     </StyledSkills>
   );
@@ -43,7 +45,7 @@ const StyledSkills = styled.section`
   background-color: #444444;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
 `;
