@@ -23,10 +23,6 @@ const StyledMenu = styled.nav`
     justify-content: center;
   }
 
-  li {
-    list-style-type: none;
-  }
-
   li::before {
     content: "#";
     color: #c778dd;

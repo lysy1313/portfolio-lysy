@@ -13,4 +13,8 @@ const StyledBtn = styled.button`
   color: #fff;
   background-color: transparent;
   padding: 10px;
+
+  &:hover {
+    background-color: rgba(199, 120, 221, 0.2);
+  }
 `;

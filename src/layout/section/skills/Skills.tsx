@@ -3,59 +3,66 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { SkillCart } from "./skill/SkillCart";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import ImageSkill from "../../../assets/images/ImageSkill.png";
+import { Container } from "../../../components/Container";
+
+const skillsData = [
+  {
+    category: "Languages",
+    list: ["TypeScript", "Lua", "Python", "JavaScript"],
+  },
+  {
+    category: "Databases",
+    list: ["SQLite", "PostgreSQL", "Mongo"],
+  },
+  {
+    category: "Tools",
+    list: [
+      "VSCode",
+      "Neovim",
+      "Linux",
+      "Figma",
+      "XFCE",
+      "Arch",
+      "Git",
+      "Font Awesome",
+    ],
+  },
+  {
+    category: "Other",
+    list: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
+  },
+  {
+    category: "Frameworks",
+    list: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
+  },
+];
 
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle textTitle="skills" />
+      <Container>
+        <SectionTitle textTitle="skills" hightLine="20%" />
 
-      <FlexWrapper justify="center" align="center" wrap="wrap">
-        <ImgSkill src={ImageSkill} />
-        <FlexWrapper justify="space-between" align="center" wrap="wrap">
-          <StyledSkillDiv>
-            <SkillCart
-              skillType="Languages"
-              skillLang="TypeScript Lua Python JavaScript"
-            />
-            <SkillCart
-              skillType="Databases"
-              skillLang="SQLite PostgreSQL Mongo"
-            />
-            <SkillCart
-              skillType="Tools"
-              skillLang="VSCode Neovim Linux Lua Figma XFCE Arch Git Font Awesome"
-            />
-            <SkillCart
-              skillType="Other"
-              skillLang="HTML CSS EJS SCSS REST Jinja JavaScript"
-            />
-            <SkillCart
-              skillType="Frameworks"
-              skillLang="React Vue Lua Lua Disnake Discord.js JavaScript Flask Express.js"
-            />
-          </StyledSkillDiv>
+        <FlexWrapper justify="space-around" align="center" wrap="wrap">
+          <ImgSkill src={ImageSkill} />
+          <FlexWrapper justify="space-between" align="center" wrap="wrap">
+            <StyledSkillDiv>
+              <SkillCart skillData={skillsData} />
+            </StyledSkillDiv>
+          </FlexWrapper>
         </FlexWrapper>
-      </FlexWrapper>
+      </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  max-height: 60vh;
-  background-color: #444444;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  /* max-height: 60vh; */
 `;
 
 const StyledSkillDiv = styled.div`
-  width: 280px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 10px;
+  width: 584px;
+  height: 280px;
 `;
 
 const ImgSkill = styled.img`

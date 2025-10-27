@@ -44,4 +44,32 @@
         </mask>
         <path d="M26 1V0H25V1H26ZM52 1H53V0H52V1ZM52 40V41H53V40H52ZM26 40H25V41H26V40ZM26 27V26H25V27H26ZM39 27V28H40V27H39ZM39 14H40V13H39V14ZM26 14H25V15H26V14ZM39 0H26V2H39V0ZM52 0H39V2H52V0ZM53 14V1H51V14H53ZM53 27V14H51V27H53ZM53 40V27H51V40H53ZM39 41H52V39H39V41ZM39 39H26V41H39V39ZM27 40V27H25V40H27ZM26 28H39V26H26V28ZM38 14V27H40V14H38ZM26 15H39V13H26V15ZM25 1V14H27V1H25Z" fill="#C778DD" mask="url(#path-3-outside-2_1103_3419)"/>
     </g>
+    <!-- DOte -->
+    <g id="dote">
+        <circle cx="2" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="22" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="42" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="62" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="82" cy="2" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="22" r="2" fill="#ABB2BF"/>
+        <circle cx="22" cy="22" r="2" fill="#ABB2BF"/>
+        <circle cx="42" cy="22" r="2" fill="#ABB2BF"/>
+        <circle cx="62" cy="22" r="2" fill="#ABB2BF"/>
+        <circle cx="82" cy="22" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="42" r="2" fill="#ABB2BF"/>
+        <circle cx="22" cy="42" r="2" fill="#ABB2BF"/>
+        <circle cx="42" cy="42" r="2" fill="#ABB2BF"/>
+        <circle cx="62" cy="42" r="2" fill="#ABB2BF"/>
+        <circle cx="82" cy="42" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="62" r="2" fill="#ABB2BF"/>
+        <circle cx="22" cy="62" r="2" fill="#ABB2BF"/>
+        <circle cx="42" cy="62" r="2" fill="#ABB2BF"/>
+        <circle cx="62" cy="62" r="2" fill="#ABB2BF"/>
+        <circle cx="82" cy="62" r="2" fill="#ABB2BF"/>
+        <circle cx="2" cy="82" r="2" fill="#ABB2BF"/>
+        <circle cx="22" cy="82" r="2" fill="#ABB2BF"/>
+        <circle cx="42" cy="82" r="2" fill="#ABB2BF"/>
+        <circle cx="62" cy="82" r="2" fill="#ABB2BF"/>
+        <circle cx="82" cy="82" r="2" fill="#ABB2BF"/>
+    </g>
 </svg>
