@@ -7,7 +7,10 @@ export const Menu = (props: { menuItems: Array<string> }) => {
         {props.menuItems.map((item: string, index: number) => {
           return (
             <li key={index}>
-              <a href="">{item}</a>
+              <a href="">
+                <span>#</span>
+                {item}
+              </a>
             </li>
           );
         })}
@@ -23,17 +26,34 @@ const StyledMenu = styled.nav`
     justify-content: center;
   }
 
-  li::before {
+  /* li a::before {
     content: "#";
     color: #c778dd;
-  }
+    font-weight: 400;
+  } */
 
   li a {
     text-decoration: none;
     color: #abb2bf;
+    transition: all 0.5s ease;
+    span {
+      color: #c778dd;
+      font-weight: 400;
+      transition: all 0.5s ease;
+    }
   }
   li a:hover {
     text-decoration: none;
     color: #fff;
+    font-weight: 500;
+    span {
+      color: #c778dd;
+      font-weight: 500;
+    }
   }
+  /* li a:hover::before {
+    content: "#";
+    color: #c778dd;
+    font-weight: 500;
+  } */
 `;

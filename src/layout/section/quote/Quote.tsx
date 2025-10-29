@@ -56,6 +56,16 @@ const StyledFieldSet = styled.div`
   position: relative;
   padding: 32px;
 
+  &:nth-child(1)::before {
+    content: "";
+    width: 91px;
+    height: 91px;
+    border: 1px solid ${theme.colors.seconderyFont};
+
+    position: absolute;
+    top: 15px;
+    right: -350px;
+  }
   &:nth-child(2) {
     border-top: none;
     margin: 0;

@@ -44,6 +44,7 @@ export const Projects = () => {
             linkCached="#"
           />
         </FlexWrapper>
+        <SquareRight></SquareRight>
       </Container>
     </StyledProjects>
   );
@@ -51,11 +52,14 @@ export const Projects = () => {
 
 const StyledProjects = styled.section``;
 
-const StyleBtnView = styled.a`
-  text-decoration: none;
+const SquareRight = styled.span`
+  width: 155px;
+  height: 155px;
+  border: 1px solid ${theme.colors.seconderyFont};
 
-  &:hover {
-    transform: scale(1.1);
-    color: ${theme.colors.seconderyFont};
-  }
+  position: absolute;
+  right: -275px;
+  bottom: 93px;
 `;
+
+const StyleBtnView = styled.a``;

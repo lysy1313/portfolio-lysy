@@ -69,15 +69,16 @@ const Copyright = styled.small`
 
   font-weight: 400;
   font-size: 16px;
+  margin-top: 50px;
 `;
 
 const FooterLogo = styled.div`
   width: 346px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 24px;
 
   h3 {
     font-weight: 400;
@@ -94,6 +95,11 @@ const FooterMedia = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
 
+  h4 {
+    font-weight: 500;
+    font-size: 24px;
+  }
+
   ul {
     display: flex;
     justify-content: flex-start;
@@ -108,5 +114,12 @@ const FooterMedia = styled.div`
   li a:hover {
     text-decoration: none;
     color: #fff;
+  }
+  li a svg {
+    transition: 1s;
+  }
+  li a svg:hover {
+    fill: ${theme.colors.font};
+    transform: scale(1.2);
   }
 `;

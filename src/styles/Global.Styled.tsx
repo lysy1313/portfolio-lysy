@@ -42,8 +42,7 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     button{
-        /* background-color: unset;
-        border: none; */
+        background-color: unset;
         font-family: "Fira Code",sans-serif;
         font-weight: 500;
         font-size: 16px;
@@ -69,9 +68,24 @@ export const GlobalStyled = createGlobalStyle`
 
     svg{
         background-color: transparent;
+        fill:#ABB2BF;
     }
 
+
     section{
-        padding: 50px 0;
+        padding: 60px 0;
+    }
+    section:last-of-type{
+        padding: 60px 0 140px;
+    }
+    
+    select{
+        font-family: "Fira Code",sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: ${theme.colors.seconderyFont};
+
     }
 `;

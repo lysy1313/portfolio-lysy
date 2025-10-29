@@ -26,7 +26,7 @@ export const Main = () => {
               <p>
                 He crafts responsive websites where technologies meet creativity
               </p>
-              <Button text="Contact me!!" />
+              <Button type="submit">Contact me!!!</Button>
             </FlexWrapper>
           </StyledDiv>
 
@@ -69,7 +69,7 @@ const StyledDiv = styled.div`
     font-size: 32px;
   }
 
-  p{
+  p {
     line-height: 25px;
     margin: 30px 0 20px;
   }

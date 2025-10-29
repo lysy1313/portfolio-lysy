@@ -16,7 +16,6 @@ const StyledLang = styled.select`
   background-color: #282c33;
   border: none;
   border-radius: 1px;
-  color: #fff;
   font-size: 15px;
   padding: 5px;
   background-image: url("../../../assets/images/quoteBlack.svg");

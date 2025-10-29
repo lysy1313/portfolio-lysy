@@ -43,7 +43,7 @@ export const Skills = () => {
       <Container>
         <SectionTitle textTitle="skills" hightLine="20%" />
 
-        <FlexWrapper justify="space-around" align="center" wrap="wrap">
+        <FlexWrapper justify="space-between" align="flex-start" wrap="wrap">
           <ImgSkill src={ImageSkill} />
           <FlexWrapper justify="space-between" align="center" wrap="wrap">
             <StyledSkillDiv>
@@ -63,8 +63,11 @@ const StyledSkills = styled.section`
 const StyledSkillDiv = styled.div`
   width: 584px;
   height: 280px;
+  margin-top: 12px;
 `;
 
 const ImgSkill = styled.img`
   width: 282px;
+  margin-left: 32px;
+  margin-top: 12px;
 `;

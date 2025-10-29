@@ -44,7 +44,7 @@ const StyledProject = styled.div`
   max-width: 330px;
   width: 100%;
   border: 0.5px solid ${theme.colors.seconderyFont};
-  /* margin: 5px; */
+  margin-top: 30px;
 
   div {
     border-top: 0.5px solid ${theme.colors.seconderyFont};

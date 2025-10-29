@@ -7,28 +7,13 @@ export const Media = () => {
     <StyledMedia>
       <Line></Line>
       <a href="">
-        <Icon
-          iconId="discord"
-          height="32px"
-          width="32px"
-          viewBox="0 0 32 32"
-        />
+        <Icon iconId="discord" height="32px" width="32px" viewBox="0 0 32 32" />
       </a>
       <a href="">
-        <Icon
-          iconId="github"
-          height="32px"
-          width="32px"
-          viewBox="0 0 32 32"
-        />
+        <Icon iconId="github" height="32px" width="32px" viewBox="0 0 32 32" />
       </a>
       <a href="">
-        <Icon
-          iconId="email"
-          height="32px"
-          width="32px"
-          viewBox="0 0 32 32"
-        />
+        <Icon iconId="email" height="32px" width="32px" viewBox="0 0 32 32" />
       </a>
     </StyledMedia>
   );
@@ -43,9 +28,17 @@ const StyledMedia = styled.div`
   justify-content: center;
   align-items: center;
   gap: 8px;
+  background-color: transparent;
+
+  a,
+  svg {
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+  }
 
   svg:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
+    fill: ${theme.colors.font};
   }
 `;
 
