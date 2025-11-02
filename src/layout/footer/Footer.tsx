@@ -62,6 +62,12 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   border-top: 1px solid ${theme.colors.seconderyFont};
   padding: 32px 0;
+
+  @media ${theme.media.mobile} {
+    ${FlexWrapper} {
+      justify-content: center;
+    }
+  }
 `;
 const Copyright = styled.small`
   text-align: center;
@@ -84,6 +90,10 @@ const FooterLogo = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
+  }
+
+  @media ${theme.media.mobile} {
+    justify-content: center;
   }
 `;
 
@@ -121,5 +131,10 @@ const FooterMedia = styled.div`
   li a svg:hover {
     fill: ${theme.colors.font};
     transform: scale(1.2);
+  }
+
+  @media ${theme.media.mobile} {
+    justify-content: center;
+    align-items: center;
   }
 `;

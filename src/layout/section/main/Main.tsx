@@ -30,7 +30,12 @@ export const Main = () => {
             </FlexWrapper>
           </StyledDiv>
 
-          <FlexWrapper justify="center" align="center" direction="column">
+          <FlexWrapper
+            justify="center"
+            align="center"
+            direction="column"
+            gap="0"
+          >
             <ImgPage>
               <ImgMan src={cartImg} alt="Man" />
               <ImgLogo src={logoImg} alt="Logo" />
@@ -42,14 +47,13 @@ export const Main = () => {
                   viewBox="0 0 84 84"
                 />
               </DoteDiv>
-
-              <ParDiv>
-                <Square></Square>
-                <p>
-                  Currently working on <strong>Portfolio</strong>
-                </p>
-              </ParDiv>
             </ImgPage>
+            <ParDiv>
+              <Square></Square>
+              <p>
+                Currently working on <strong>Portfolio</strong>
+              </p>
+            </ParDiv>
           </FlexWrapper>
         </FlexWrapper>
       </Container>
@@ -57,13 +61,23 @@ export const Main = () => {
   );
 };
 
-const StyledMain = styled.main`
+const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
+
+  @media ${theme.media.mobile} {
+    ${FlexWrapper} {
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: nowrap;
+
+      padding-top: 20px;
+    }
+  }
 `;
 
 const StyledDiv = styled.div`
-  width: 537px;
+  max-width: 537px;
 
   h1 {
     font-size: 32px;
@@ -83,10 +97,17 @@ const ImgPage = styled.div`
   position: relative;
   width: 469px;
   height: 386px;
+
+  @media ${theme.media.mobile} {
+    width: 316px;
+    height: 260px;
+    /* transform: scale(0.7); */
+  }
 `;
 
 const ImgMan = styled.img`
-  width: 457px;
+  max-width: 457px;
+  width: 100%;
   height: 386px;
   object-fit: cover;
   background-color: transparent;
@@ -94,6 +115,12 @@ const ImgMan = styled.img`
   bottom: 0;
   right: 0;
   z-index: 1;
+
+  @media ${theme.media.mobile} {
+    max-width: 307px;
+    width: 100%;
+    height: 260px;
+  }
 `;
 
 const ImgLogo = styled.img`
@@ -105,25 +132,40 @@ const ImgLogo = styled.img`
   left: 0px;
   top: 84px;
   z-index: 0;
+
+  @media ${theme.media.mobile} {
+    width: 104px;
+    height: 104px;
+  }
 `;
 
 const ParDiv = styled.div`
   border: 1px solid ${theme.colors.seconderyFont};
-  display: inline;
-  position: absolute;
-  z-index: 2;
-  right: 35px;
-  bottom: -20px;
   display: flex;
   align-items: center;
-  width: 402px;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 402px;
+  width: 100%;
+  padding: 8px;
+
+  p {
+    /* display: inline; */
+    text-align: start;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 320px;
+    height: 58px;
+    white-space: pre-wrap;
+  }
 `;
 
 const Square = styled.span`
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 5px;
+  width: 16px;
+  height: 16px;
+  /* margin: 5px 10px 5px; */
   background-color: ${theme.colors.accent};
 `;
 
@@ -135,5 +177,11 @@ const DoteDiv = styled.div`
   z-index: 2;
   svg {
     background-color: transparent;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 57px;
+    height: 57px;
+    transform: scale(0.7);
   }
 `;

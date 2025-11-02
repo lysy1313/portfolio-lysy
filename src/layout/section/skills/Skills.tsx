@@ -45,24 +45,21 @@ export const Skills = () => {
 
         <FlexWrapper justify="space-between" align="flex-start" wrap="wrap">
           <ImgSkill src={ImageSkill} />
-          <FlexWrapper justify="space-between" align="center" wrap="wrap">
-            <StyledSkillDiv>
-              <SkillCart skillData={skillsData} />
-            </StyledSkillDiv>
-          </FlexWrapper>
+          <StyledSkillDiv>
+            <SkillCart skillData={skillsData} />
+          </StyledSkillDiv>
         </FlexWrapper>
       </Container>
     </StyledSkills>
   );
 };
 
-const StyledSkills = styled.section`
-  /* max-height: 60vh; */
-`;
+const StyledSkills = styled.section``;
 
 const StyledSkillDiv = styled.div`
-  width: 584px;
-  height: 280px;
+  max-width: 584px;
+  width: 100%;
+  /* min-height: 280px; */
   margin-top: 12px;
 `;
 
@@ -70,4 +67,5 @@ const ImgSkill = styled.img`
   width: 282px;
   margin-left: 32px;
   margin-top: 12px;
+  object-fit: cover;
 `;

@@ -2,10 +2,9 @@ import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { theme } from "../../styles/theme";
 
-export const Media = () => {
+export const MobileMedia = () => {
   return (
-    <StyledMedia>
-      <Line></Line>
+    <StyledMobileMedia>
       <a href="">
         <Icon iconId="discord" height="32px" width="32px" viewBox="0 0 32 32" />
       </a>
@@ -15,20 +14,21 @@ export const Media = () => {
       <a href="">
         <Icon iconId="email" height="32px" width="32px" viewBox="0 0 32 32" />
       </a>
-    </StyledMedia>
+    </StyledMobileMedia>
   );
 };
 
-const StyledMedia = styled.div`
+const StyledMobileMedia = styled.div`
   position: absolute;
-  left: -122px;
-  top: -32px;
+  left: 0;
+  right: 0;
+  bottom: 32px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
   background-color: transparent;
+  transform: scale(2);
 
   a,
   svg {
@@ -40,14 +40,4 @@ const StyledMedia = styled.div`
     transform: scale(1.3);
     fill: ${theme.colors.font};
   }
-
-  @media ${theme.media.tablet} {
-    display: none;
-  }
-`;
-
-const Line = styled.span`
-  height: 191px;
-  width: 1px;
-  background-color: ${theme.colors.seconderyFont};
 `;

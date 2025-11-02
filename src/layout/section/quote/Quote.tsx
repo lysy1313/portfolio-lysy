@@ -65,6 +65,10 @@ const StyledFieldSet = styled.div`
     position: absolute;
     top: 15px;
     right: -350px;
+
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   }
   &:nth-child(2) {
     border-top: none;

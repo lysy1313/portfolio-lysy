@@ -60,7 +60,7 @@ export const Contacts = () => {
 const StyledContacts = styled.section``;
 
 const TextContacts = styled.p`
-  width: 505px;
+  max-width: 505px;
   text-align: start;
   margin-top: 20px;
 

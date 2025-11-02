@@ -60,6 +60,10 @@ const SquareRight = styled.span`
   position: absolute;
   right: -275px;
   bottom: 93px;
+
+  @media ${theme.media.mobile} {
+    display: none;
+  }
 `;
 
 const StyleBtnView = styled.a``;

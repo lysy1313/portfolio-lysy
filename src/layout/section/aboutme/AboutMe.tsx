@@ -53,9 +53,7 @@ export const AboutMe = () => {
   );
 };
 
-const StyledAboutMe = styled.section`
-  max-height: 100vh;
-`;
+const StyledAboutMe = styled.section``;
 
 const TextAbout = styled.p`
   max-width: 515px;
@@ -73,6 +71,10 @@ const TextAbout = styled.p`
     position: absolute;
     top: 50px;
     left: -45%;
+
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   }
 `;
 
@@ -81,6 +83,10 @@ const ImgDiv = styled.div`
   height: 508px;
   position: relative;
   top: -50px;
+
+  @media ${theme.media.mobile} {
+    margin-top: 50px;
+  }
 
   &::after {
     content: "";
@@ -99,6 +105,9 @@ const ImgDiv = styled.div`
     position: absolute;
     bottom: 100px;
     right: -190px;
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   }
 `;
 

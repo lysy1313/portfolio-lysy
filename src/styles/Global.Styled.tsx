@@ -12,11 +12,8 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     * {
-        background-color: #282c33;
-        margin: 0;
-        padding: 0;
-        color: #fff;
-        box-sizing: border-box;
+        background-color: ${theme.colors.primaryBg};
+        color: ${theme.colors.font};
     }
 
     body {
@@ -43,6 +40,7 @@ export const GlobalStyled = createGlobalStyle`
 
     button{
         background-color: unset;
+        border: none;
         font-family: "Fira Code",sans-serif;
         font-weight: 500;
         font-size: 16px;
@@ -68,7 +66,8 @@ export const GlobalStyled = createGlobalStyle`
 
     svg{
         background-color: transparent;
-        fill:#ABB2BF;
+        fill:${theme.colors.seconderyFont};
+        stroke: ${theme.colors.seconderyFont};
     }
 
 

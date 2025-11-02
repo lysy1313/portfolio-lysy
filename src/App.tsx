@@ -1,5 +1,5 @@
 import "./App.css";
-import { ContactForm } from "./components/contactForm/ContactForm";
+// import { ContactForm } from "./components/contactForm/ContactForm";
 import { Footer } from "./layout/footer/Footer";
 import { Header } from "./layout/header/Header";
 import { AboutMe } from "./layout/section/aboutme/AboutMe";
