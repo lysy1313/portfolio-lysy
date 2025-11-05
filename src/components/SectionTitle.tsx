@@ -32,6 +32,7 @@ const StyledH2 = styled.h2<SectionTitlePropsType>`
   color: ${theme.colors.font};
   text-align: start;
   position: relative;
+  font-size: 32px;
 
   &::before {
     content: "";
@@ -44,14 +45,12 @@ const StyledH2 = styled.h2<SectionTitlePropsType>`
     right: -60%;
     top: 20px;
     transform: translateX(50%);
+
+    @media ${theme.media.mobile} {
+      display: none;
+    }
   }
   span {
     color: ${theme.colors.accent};
   }
 `;
-
-// const LineTitle = styled.div<SectionTitlePropsType>`
-//   width: ${(props) => props.hightLine || "30%"};
-//   height: 1px;
-//   background-color: ${theme.colors.accent};
-// `;

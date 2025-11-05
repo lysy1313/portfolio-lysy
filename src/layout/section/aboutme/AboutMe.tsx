@@ -1,17 +1,16 @@
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 import imgMan2 from "../../../assets/images/Man1.png";
 import dotsImg from "../../../assets/images/Dots.svg";
-import dotsWidthImg from "../../../assets/images/DotsWidth.svg";
 import miniDotsImg from "../../../assets/images/Dote 4x5.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { theme } from "../../../styles/theme";
 import { StyledLinkBtn } from "../../../components/LinkBtn";
+import { S } from "./AboutMe_Styles";
+import React from "react";
 
-export const AboutMe = () => {
+export const AboutMe: React.FC = () => {
   return (
-    <StyledAboutMe>
+    <S.StyledAboutMe>
       <Container>
         <SectionTitle textTitle="about-me" hightLine="30%" />
         <FlexWrapper
@@ -24,9 +23,9 @@ export const AboutMe = () => {
             justify="space-start"
             align="flex-start"
             direction="column"
-            gap="10px"
+            gap="25px"
           >
-            <TextAbout>
+            <S.TextAbout>
               Hello, i’m Elias! <br />
               <br />
               I’m a self-taught front-end developer based in Kyiv, Ukraine. I
@@ -37,93 +36,18 @@ export const AboutMe = () => {
               my passion for over a year. I have been helping various clients to
               establish their presence online. I always strive to learn about
               the newest technologies and frameworks.
-            </TextAbout>
+            </S.TextAbout>
             <StyledLinkBtn href="" primary>
               Read more &rarr;
             </StyledLinkBtn>
           </FlexWrapper>
-          <ImgDiv>
-            <Dots src={dotsImg} alt="Мужик с закрытым лицом" />
-            <ImgMan src={imgMan2} alt="Мужик с закрытым лицом" />
-            <MiniDots src={miniDotsImg} alt="Мужик с закрытым лицом" />
-          </ImgDiv>
+          <S.ImgDiv>
+            <S.Dots src={dotsImg} alt="Мужик с закрытым лицом" />
+            <S.ImgMan src={imgMan2} alt="Мужик с закрытым лицом" />
+            <S.MiniDots src={miniDotsImg} alt="Мужик с закрытым лицом" />
+          </S.ImgDiv>
         </FlexWrapper>
       </Container>
-    </StyledAboutMe>
+    </S.StyledAboutMe>
   );
 };
-
-const StyledAboutMe = styled.section``;
-
-const TextAbout = styled.p`
-  max-width: 515px;
-  text-align: start;
-  margin-top: 20px;
-  display: inline-block;
-  position: relative;
-
-  &::after {
-    content: "";
-    width: 155px;
-    height: 155px;
-    border: 1px solid ${theme.colors.seconderyFont};
-
-    position: absolute;
-    top: 50px;
-    left: -45%;
-
-    @media ${theme.media.mobile} {
-      display: none;
-    }
-  }
-`;
-
-const ImgDiv = styled.div`
-  width: 343px;
-  height: 508px;
-  position: relative;
-  top: -50px;
-
-  @media ${theme.media.mobile} {
-    margin-top: 50px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: translate(15%);
-    width: 271px;
-    height: 1px;
-    background-color: ${theme.colors.accent};
-  }
-
-  &::before {
-    content: url("${dotsWidthImg}");
-    position: absolute;
-    bottom: 100px;
-    right: -190px;
-    @media ${theme.media.mobile} {
-      display: none;
-    }
-  }
-`;
-
-const ImgMan = styled.img`
-  background-color: transparent;
-  object-fit: cover;
-`;
-
-const Dots = styled.img`
-  background-color: transparent;
-  position: absolute;
-  top: 60px;
-`;
-const MiniDots = styled.img`
-  background-color: transparent;
-  position: absolute;
-  right: 16px;
-  bottom: 170px;
-`;

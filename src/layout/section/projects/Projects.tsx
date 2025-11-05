@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Project } from "./project/Project";
@@ -6,24 +5,25 @@ import chertImg from "../../../assets/images/Chert.jpg";
 import protectImg from "../../../assets/images/Protect.jpg";
 import kahootImg from "../../../assets/images/Kahoot.jpg";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/theme";
+import { S } from "./Projects_Styles";
+import React from "react";
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
-    <StyledProjects>
+    <S.StyledProjects>
       <Container>
-        <FlexWrapper justify="space-between" align="center" wrap="wrap">
+        <S.StyledProjectTitle>
           <SectionTitle textTitle="projects" hightLine="511px" />
-          <StyleBtnView href="">View all ~~&gt;</StyleBtnView>
-        </FlexWrapper>
+          <S.StyleBtnView href="">View all ~~&gt;</S.StyleBtnView>
+        </S.StyledProjectTitle>
 
-        <FlexWrapper justify="space-between" align="start" wrap="wrap">
+        <FlexWrapper justify="space-around" align="start" wrap="wrap">
           <Project
             cartImg={chertImg}
             headline="ChertNodes"
             textParag="Minecraft servers hosting"
             textTopic="HTML SCSS Python Flask"
-            linkDis="inline"
+            linkDis="block"
             linkCached="#"
             linkLive="#"
           />
@@ -44,26 +44,8 @@ export const Projects = () => {
             linkCached="#"
           />
         </FlexWrapper>
-        <SquareRight></SquareRight>
+        <S.SquareRight></S.SquareRight>
       </Container>
-    </StyledProjects>
+    </S.StyledProjects>
   );
 };
-
-const StyledProjects = styled.section``;
-
-const SquareRight = styled.span`
-  width: 155px;
-  height: 155px;
-  border: 1px solid ${theme.colors.seconderyFont};
-
-  position: absolute;
-  right: -275px;
-  bottom: 93px;
-
-  @media ${theme.media.mobile} {
-    display: none;
-  }
-`;
-
-const StyleBtnView = styled.a``;

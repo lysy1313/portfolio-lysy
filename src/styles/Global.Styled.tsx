@@ -24,7 +24,11 @@ export const GlobalStyled = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color:${theme.colors.seconderyFont};
-        /* line-height: 100% ; */
+        min-width: 360px; 
+    }
+
+    main{
+        padding: 100px 0 10px;
     }
 
     a{
@@ -44,6 +48,7 @@ export const GlobalStyled = createGlobalStyle`
         font-family: "Fira Code",sans-serif;
         font-weight: 500;
         font-size: 16px;
+        letter-spacing: 0;
 
     }
     button:hover{
@@ -67,7 +72,7 @@ export const GlobalStyled = createGlobalStyle`
     svg{
         background-color: transparent;
         fill:${theme.colors.seconderyFont};
-        stroke: ${theme.colors.seconderyFont};
+        
     }
 
 

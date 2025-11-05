@@ -1,51 +1,17 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/theme";
-import { LanguageSwitch } from "../languageSwitch/LanguageSwitch";
-import { Logo } from "../logo/Logo";
-import { MobileMedia } from "../mobileMedia/MobileMedia";
-import { useState } from "react";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-  const [isOpen, setIsOpen] = useState(false);
+//Header
+const StyleHeader = styled.header`
+  padding: 32px 0 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+`;
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-    console.log(isOpen);
-  };
-
-  return (
-    <StyledMobileMenu>
-      <Burgerbutton onClick={handleToggle}>
-        <span></span>
-      </Burgerbutton>
-
-      {isOpen && (
-        <MobileMenuPopup>
-          <StyledLogo>
-            <Logo />
-          </StyledLogo>
-          <ul>
-            {props.menuItems.map((item: string, index: number) => {
-              return (
-                <li key={index}>
-                  <a href="">
-                    <span>#</span>
-                    {item}
-                  </a>
-                </li>
-              );
-            })}
-            <li>
-              <LanguageSwitch />
-            </li>
-          </ul>
-          <MobileMedia />
-        </MobileMenuPopup>
-      )}
-    </StyledMobileMenu>
-  );
-};
-
+//Mobile menu
 const StyledMobileMenu = styled.nav`
   display: none;
 
@@ -172,3 +138,112 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
     }
   }
 `;
+
+//Mobile media
+const StyledMobileMedia = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  transform: scale(2);
+
+  a,
+  svg {
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+  }
+
+  svg:hover {
+    transform: scale(1.3);
+    fill: ${theme.colors.font};
+  }
+`;
+
+//Media
+const StyledMedia = styled.div`
+  position: absolute;
+  left: -145px;
+  top: -32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+
+  a,
+  svg {
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+  }
+
+  svg:hover {
+    transform: scale(1.3);
+    fill: ${theme.colors.font};
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
+
+const Line = styled.span`
+  height: 191px;
+  width: 1px;
+  background-color: ${theme.colors.seconderyFont};
+`;
+
+//Menu
+const StyledMenu = styled.nav`
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
+
+const StyledListMenu = styled.ul`
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+
+  li a {
+    text-decoration: none;
+    color: #abb2bf;
+    transition: all 0.5s ease;
+    span {
+      color: #c778dd;
+      font-weight: 400;
+      transition: all 0.5s ease;
+    }
+  }
+  li a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    span {
+      color: #c778dd;
+      font-weight: 500;
+    }
+  }
+`;
+
+export const S = {
+  StyleHeader,
+  StyledMobileMenu,
+  StyledLogo,
+  MobileMenuPopup,
+  Burgerbutton,
+  StyledMobileMedia,
+  StyledMedia,
+  Line,
+  StyledMenu,
+  StyledListMenu,
+};

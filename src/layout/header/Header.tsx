@@ -1,33 +1,44 @@
-import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
+import { Menu } from "./menu/Menu";
 import { Logo } from "../../components/logo/Logo";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
-import { Media } from "../../components/media/Media";
-import { MobileMenu } from "../../components/mobileMenu/MobileMenu";
+import { MobileMenu } from "./mobileMenu/MobileMenu";
+import React from "react";
+import { S } from "./Header_Styles";
+import { Media } from "./media/Media";
 
 const items = ["home", "works", "about-me", "contact"];
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    // Return a function from the effect that removes the event listener
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <StyleHeader>
+    <S.StyleHeader>
       <Container>
         <Media />
         <FlexWrapper justify="space-between" align="center" wrap="wrap">
-          <Logo />
-          <Menu menuItems={items} />
-          <MobileMenu menuItems={items} />
+          {width < breakpoint ? (
+            <>
+              <Logo />
+              <MobileMenu menuItems={items} />
+            </>
+          ) : (
+            <>
+              <Logo />
+              <Menu menuItems={items} />
+            </>
+          )}
         </FlexWrapper>
       </Container>
-    </StyleHeader>
+    </S.StyleHeader>
   );
 };
-
-const StyleHeader = styled.header`
-  padding: 32px 0 8px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-`;

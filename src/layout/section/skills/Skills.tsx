@@ -1,9 +1,10 @@
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { SkillCart } from "./skill/SkillCart";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import ImageSkill from "../../../assets/images/ImageSkill.png";
 import { Container } from "../../../components/Container";
+import { S } from "./Skill_Styles";
+import React from "react";
 
 const skillsData = [
   {
@@ -37,35 +38,19 @@ const skillsData = [
   },
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <S.StyledSkills>
       <Container>
         <SectionTitle textTitle="skills" hightLine="20%" />
 
         <FlexWrapper justify="space-between" align="flex-start" wrap="wrap">
-          <ImgSkill src={ImageSkill} />
-          <StyledSkillDiv>
+          <S.ImgSkill src={ImageSkill} />
+          <S.StyledSkillDiv>
             <SkillCart skillData={skillsData} />
-          </StyledSkillDiv>
+          </S.StyledSkillDiv>
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.StyledSkills>
   );
 };
-
-const StyledSkills = styled.section``;
-
-const StyledSkillDiv = styled.div`
-  max-width: 584px;
-  width: 100%;
-  /* min-height: 280px; */
-  margin-top: 12px;
-`;
-
-const ImgSkill = styled.img`
-  width: 282px;
-  margin-left: 32px;
-  margin-top: 12px;
-  object-fit: cover;
-`;

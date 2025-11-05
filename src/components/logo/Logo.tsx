@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
 import { FlexWrapper } from "../FlexWrapper";
+import React from "react";
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
   return (
     <FlexWrapper justify="center" align="center">
       <StyledLinkLogo href="">
@@ -22,6 +23,6 @@ const StyledLinkLogo = styled.a`
 
   h2 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 16px;
   }
 `;

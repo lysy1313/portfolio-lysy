@@ -1,22 +1,22 @@
-import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { Logo } from "../../components/logo/Logo";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Icon } from "../../components/icon/Icon";
-import { theme } from "../../styles/theme";
+import React from "react";
+import { S } from "./Footer_Styles";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.StyledFooter>
       <Container>
         <FlexWrapper justify="space-between" direction="column">
           <FlexWrapper justify="space-between" align="center" wrap="wrap">
-            <FooterLogo>
+            <S.FooterLogo>
               <Logo />
               <p>elias@elias-dev.ml</p>
               <h3>Web designer and front-end developer</h3>
-            </FooterLogo>
-            <FooterMedia>
+            </S.FooterLogo>
+            <S.FooterMedia>
               <h4>Media</h4>
               <ul>
                 <li>
@@ -50,91 +50,11 @@ export const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </FooterMedia>
+            </S.FooterMedia>
           </FlexWrapper>
-          <Copyright>© Copyright 2025. Made by Lysy</Copyright>
+          <S.Copyright>© Copyright 2025. Made by Lysy</S.Copyright>
         </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </S.StyledFooter>
   );
 };
-
-const StyledFooter = styled.footer`
-  border-top: 1px solid ${theme.colors.seconderyFont};
-  padding: 32px 0;
-
-  @media ${theme.media.mobile} {
-    ${FlexWrapper} {
-      justify-content: center;
-    }
-  }
-`;
-const Copyright = styled.small`
-  text-align: center;
-  color: ${theme.colors.seconderyFont};
-
-  font-weight: 400;
-  font-size: 16px;
-  margin-top: 50px;
-`;
-
-const FooterLogo = styled.div`
-  width: 346px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-
-  h3 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-  }
-
-  @media ${theme.media.mobile} {
-    justify-content: center;
-  }
-`;
-
-const FooterMedia = styled.div`
-  width: 112px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
-  h4 {
-    font-weight: 500;
-    font-size: 24px;
-  }
-
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
-    width: 100%;
-  }
-
-  li a {
-    text-decoration: none;
-    color: #abb2bf;
-  }
-  li a:hover {
-    text-decoration: none;
-    color: #fff;
-  }
-  li a svg {
-    transition: 1s;
-  }
-  li a svg:hover {
-    fill: ${theme.colors.font};
-    transform: scale(1.2);
-  }
-
-  @media ${theme.media.mobile} {
-    justify-content: center;
-    align-items: center;
-  }
-`;
