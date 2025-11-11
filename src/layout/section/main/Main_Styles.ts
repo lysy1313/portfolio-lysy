@@ -13,7 +13,7 @@ const StyledMain = styled.main`
     gap: 112px;
   }
 
-  @media ${theme.media.tablet} {
+  @media ${theme.media.desktopMax} {
     ${FlexWrapper} {
       flex-direction: column;
       justify-content: center;
@@ -96,7 +96,7 @@ const ParDiv = styled.div`
   gap: 10px;
   max-width: 402px;
   width: 100%;
-  padding: 8px;
+  padding: 5px;
 
   p {
     text-align: start;
@@ -150,6 +150,25 @@ const StyledFieldSet = styled.div`
     top: 15px;
     right: -340px;
     display: none;
+
+    animation: rotateXSquare 5s infinite ease-in-out;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+    @keyframes rotateXSquare {
+      0% {
+        transform: rotate(0) translateY(0);
+      }
+
+      50% {
+        transform: rotate(180deg) translateY(-175px);
+      }
+
+      100% {
+        transform: rotate(-180deg) translateY(0);
+      }
+    }
 
     @media ${theme.media.desktop} {
       display: block;

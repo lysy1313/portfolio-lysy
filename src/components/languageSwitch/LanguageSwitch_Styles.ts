@@ -43,7 +43,8 @@ const DropdownMenu = styled.ul`
   right: 0;
   left: 0;
   top: 25px;
-  background-color: transparent;
+
+  background-color: ${theme.colors.primaryBg};
   box-shadow: 0 10px 15px rgba(158, 158, 158, 0.2);
   color: ${theme.colors.seconderyFont};
   padding: 8px;

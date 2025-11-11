@@ -27,6 +27,11 @@ export const GlobalStyled = createGlobalStyle`
         min-width: 360px; 
     }
 
+    .no-scroll {
+        overflow: hidden;
+    }
+
+
     main{
         padding: 100px 0 10px;
     }

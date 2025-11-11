@@ -29,6 +29,25 @@ const TextAbout = styled.p`
     left: -45%;
     display: none;
 
+    animation: rotateRIghtSquare 5s infinite linear;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+    @keyframes rotateRIghtSquare {
+      0% {
+        transform: rotateY(0);
+      }
+
+      50% {
+        transform: rotateY(-360deg);
+      }
+
+      100% {
+        transform: rotateY(0);
+      }
+    }
+
     @media ${theme.media.desktop} {
       display: block;
     }
@@ -63,6 +82,25 @@ const ImgDiv = styled.div`
     bottom: 100px;
     right: -190px;
     display: none;
+
+    animation: rotateDots 5s infinite linear;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+    @keyframes rotateDots {
+      0% {
+        transform: rotateY(0);
+      }
+
+      50% {
+        transform: rotateY(360deg);
+      }
+
+      100% {
+        transform: rotateY(0);
+      }
+    }
 
     @media ${theme.media.desktop} {
       display: block;

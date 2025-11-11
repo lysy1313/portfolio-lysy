@@ -15,6 +15,7 @@ const StyledProjectTitle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
 `;
 
 const SquareRight = styled.span`
@@ -27,9 +28,30 @@ const SquareRight = styled.span`
   bottom: 100px;
 
   display: none;
+  /* box-shadow: 0 10px 5px -5px rgba(255, 255, 255, 0.36); */
+
+  animation: rotateSquare 5s infinite ease-in-out;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 
   @media ${theme.media.desktop} {
     display: block;
+  }
+
+  @keyframes rotateSquare {
+    0% {
+      transform: rotateY(0) translateY(0);
+    }
+
+    50% {
+      transform: rotateY(360deg) translateY(-295px);
+    }
+
+    100% {
+      transform: rotateY(-360deg) translateY(0);
+    }
   }
 `;
 
@@ -40,7 +62,6 @@ const StyledProject = styled.div`
   max-width: 330px;
   width: 100%;
   border: 0.5px solid ${theme.colors.seconderyFont};
-  margin-top: 50px;
 
   div {
     border-top: 0.5px solid ${theme.colors.seconderyFont};
@@ -68,10 +89,11 @@ const Img = styled.img`
 `;
 const ListTopic = styled.p`
   text-align: start;
-  padding: 8px;
+  line-height: 30px;
+  padding: 0 8px 2px;
 `;
 const Parag = styled.p`
-  letter-spacing: 0.1;
+  letter-spacing: 0;
   line-height: 100%;
 `;
 const StyledH4 = styled.h4`

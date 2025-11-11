@@ -7,7 +7,12 @@ import React from "react";
 import { S } from "./Header_Styles";
 import { Media } from "./media/Media";
 
-const items = ["home", "works", "about-me", "contact"];
+const items = [
+  { nameItems: "home", hrefItem: "/" },
+  { nameItems: "works", hrefItem: "/works" },
+  { nameItems: "about-me", hrefItem: "/about-me" },
+  { nameItems: "contact", hrefItem: "/contact" },
+];
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);

@@ -1,4 +1,4 @@
-import { SectionTitle } from "../../../components/SectionTitle";
+import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { Icon } from "../../../components/icon/Icon";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";

@@ -1,5 +1,5 @@
 import { Container } from "../../../components/Container";
-import { SectionTitle } from "../../../components/SectionTitle";
+import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import imgMan2 from "../../../assets/images/Man1.png";
 import dotsImg from "../../../assets/images/Dots.svg";
 import miniDotsImg from "../../../assets/images/Dote 4x5.svg";

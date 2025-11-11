@@ -4,7 +4,8 @@ import { theme } from "../styles/theme";
 type LinkBtnPropsType = {
   primary?: boolean;
   outlined?: boolean;
-  linkDisplay?: string;
+  // linkDisplayPrimary?: string;
+  // linkDisplayOutlined?: string;
 };
 
 export const StyledLinkBtn = styled.a<LinkBtnPropsType>`
@@ -16,8 +17,6 @@ export const StyledLinkBtn = styled.a<LinkBtnPropsType>`
       border: 1px solid ${theme.colors.seconderyFont};
       color: ${theme.colors.seconderyFont};
       background-color: transparent;
-
-      display: ${(props) => props.linkDisplay || "none"};
 
       &:hover {
         background-color: rgba(171, 178, 191, 0.2);

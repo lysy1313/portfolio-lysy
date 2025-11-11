@@ -3,10 +3,12 @@ import { Logo } from "../../../components/logo/Logo";
 import { MobileMedia } from "../mobileMedia/MobileMedia";
 import React, { useState } from "react";
 import { S } from "../Header_Styles";
+import { MenuItemsType } from "../menu/Menu";
+import { Link } from "react-router-dom";
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
-  menuItems: Array<string>;
-}) => {
+export const MobileMenu: React.FC<{
+  menuItems: Array<MenuItemsType>;
+}> = (props: { menuItems: Array<MenuItemsType> }) => {
   const [burgerMenuIsOpen, setBurgerMenuIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -24,13 +26,13 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: {
           <Logo />
         </S.StyledLogo>
         <ul>
-          {props.menuItems.map((item: string, index: number) => {
+          {props.menuItems.map((item, index: number) => {
             return (
               <li key={index}>
-                <a href="">
+                <Link to={item.hrefItem} onClick={handleToggle}>
                   <span>#</span>
-                  {item}
-                </a>
+                  {item.nameItems}
+                </Link>
               </li>
             );
           })}

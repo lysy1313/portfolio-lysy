@@ -1,20 +1,26 @@
 import React from "react";
 import { LanguageSwitch } from "../../../components/languageSwitch/LanguageSwitch";
 import { S } from "../Header_Styles";
+import { Link } from "react-router-dom";
 
-export const Menu: React.FC<{ menuItems: Array<string> }> = (props: {
-  menuItems: Array<string>;
+export type MenuItemsType = {
+  nameItems: string;
+  hrefItem: string;
+};
+
+export const Menu: React.FC<{ menuItems: Array<MenuItemsType> }> = (props: {
+  menuItems: Array<MenuItemsType>;
 }) => {
   return (
     <S.StyledMenu>
       <S.StyledListMenu>
-        {props.menuItems.map((item: string, index: number) => {
+        {props.menuItems.map((item, index: number) => {
           return (
             <li key={index}>
-              <a href="">
+              <Link to={item.hrefItem}>
                 <span>#</span>
-                {item}
-              </a>
+                {item.nameItems}
+              </Link>
             </li>
           );
         })}

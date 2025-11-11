@@ -10,7 +10,7 @@ export const Container = styled.div`
   /* outline: 1px solid red; */
   position: relative;
 
-  @media ${theme.media.tablet} {
+  @media ${theme.media.desktopMax} {
     padding: 0 15px;
   }
 `;

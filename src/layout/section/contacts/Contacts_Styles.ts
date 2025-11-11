@@ -27,6 +27,22 @@ const TextContacts = styled.p`
     position: absolute;
     top: 0;
     left: -220px;
+    transform-origin: left bottom;
+    animation: rotateDots 5s infinite ease-in-out;
+
+    @keyframes rotateDots {
+      0% {
+        transform: rotateY(0);
+      }
+
+      50% {
+        transform: rotateY(-180deg);
+      }
+
+      100% {
+        transform: rotateY(0);
+      }
+    }
 
     @media ${theme.media.tablet} {
       display: none;

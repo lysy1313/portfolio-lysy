@@ -18,7 +18,7 @@ const StyledSkillDiv = styled.div`
 `;
 
 const ImgSkill = styled.img`
-  width: 282px;
+  width: 349px;
   margin-left: 32px;
   margin-top: 12px;
   object-fit: cover;

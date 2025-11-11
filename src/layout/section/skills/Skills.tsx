@@ -1,4 +1,4 @@
-import { SectionTitle } from "../../../components/SectionTitle";
+import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { SkillCart } from "./skill/SkillCart";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import ImageSkill from "../../../assets/images/ImageSkill.png";

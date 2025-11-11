@@ -2,18 +2,17 @@ import React from "react";
 import { StyledLinkBtn } from "../../../../components/LinkBtn";
 import { S } from "../Projects_Styles";
 
-type ProjectPropsType = {
+type ProjectPropsItemsType = {
   cartImg?: string;
   textTopic?: string;
   headline?: string;
   textParag?: string;
-  linkDis?: string;
   linkLive?: string;
   linkCached?: string;
 };
 
-export const Project: React.FC<ProjectPropsType> = (
-  props: ProjectPropsType
+export const Project: React.FC<ProjectPropsItemsType> = (
+  props: ProjectPropsItemsType
 ) => {
   return (
     <S.StyledProject>
@@ -23,16 +22,21 @@ export const Project: React.FC<ProjectPropsType> = (
         <S.StyledH4>{props.headline}</S.StyledH4>
         <S.Parag>{props.textParag}</S.Parag>
         <div className="divBtn">
-          <StyledLinkBtn href={props.linkLive} primary>
-            Live &lt;~&gt;
-          </StyledLinkBtn>
-          <StyledLinkBtn
-            href={props.linkCached}
-            outlined
-            linkDisplay={props.linkDis}
-          >
-            Cached &#x2265;
-          </StyledLinkBtn>
+          {props.linkLive != null ? (
+            <StyledLinkBtn href={props.linkLive} primary>
+              Live &lt;~&gt;
+            </StyledLinkBtn>
+          ) : (
+            false
+          )}
+
+          {props.linkCached != null ? (
+            <StyledLinkBtn href={props.linkCached} outlined>
+              Cached &#x2265;
+            </StyledLinkBtn>
+          ) : (
+            false
+          )}
         </div>
       </div>
     </S.StyledProject>
