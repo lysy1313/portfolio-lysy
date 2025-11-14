@@ -74,6 +74,15 @@ export const GlobalStyled = createGlobalStyle`
         /* line-height: 100%; */
     }
 
+    .Typewriter__wrapper{
+        font-weight: 400;
+        font-style: normal;
+        line-height: 26px;
+
+        font-size: 16px;
+        color: ${theme.colors.seconderyFont};
+    }
+
     svg{
         background-color: transparent;
         fill:${theme.colors.seconderyFont};
@@ -83,9 +92,6 @@ export const GlobalStyled = createGlobalStyle`
 
     section{
         padding: 60px 0;
-    }
-    section:last-of-type{
-        padding: 60px 0 140px;
     }
     
     select{

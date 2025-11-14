@@ -7,6 +7,7 @@ import { Icon } from "../../../components/icon/Icon";
 import { useEffect, useState } from "react";
 import { ContactForm } from "../../../components/contactForm/ContactForm";
 import { S } from "./Main_Styles";
+import Typewriter from "typewriter-effect";
 
 export const Main: React.FC = () => {
   const [contactMenuOpen, setContactMenuOpen] = useState(false);
@@ -46,8 +47,17 @@ export const Main: React.FC = () => {
                 Elias is a <S.StyledStrong>web designer</S.StyledStrong> and{" "}
                 <S.StyledStrong>front-end</S.StyledStrong> developer
               </h1>
+
               <p>
-                He crafts responsive websites where technologies meet creativity
+                <Typewriter
+                  options={{
+                    strings: [
+                      "He crafts responsive websites where technologies meet creativity",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </p>
               <Button onClick={handleToggle}>Contact me!!!</Button>
             </FlexWrapper>

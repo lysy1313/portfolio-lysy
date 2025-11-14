@@ -17,41 +17,6 @@ const TextAbout = styled.p`
   margin-top: 20px;
   display: inline-block;
   position: relative;
-
-  &::after {
-    content: "";
-    width: 155px;
-    height: 155px;
-    border: 1px solid ${theme.colors.seconderyFont};
-
-    position: absolute;
-    top: 50px;
-    left: -45%;
-    display: none;
-
-    animation: rotateRIghtSquare 5s infinite linear;
-
-    &:hover {
-      animation-play-state: paused;
-    }
-    @keyframes rotateRIghtSquare {
-      0% {
-        transform: rotateY(0);
-      }
-
-      50% {
-        transform: rotateY(-360deg);
-      }
-
-      100% {
-        transform: rotateY(0);
-      }
-    }
-
-    @media ${theme.media.desktop} {
-      display: block;
-    }
-  }
 `;
 
 const ImgDiv = styled.div`
@@ -60,7 +25,7 @@ const ImgDiv = styled.div`
   position: relative;
   top: -50px;
 
-  @media ${theme.media.tablet} {
+  @media screen and (max-width: 887px) {
     top: 0;
   }
 

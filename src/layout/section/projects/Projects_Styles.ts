@@ -65,7 +65,7 @@ const StyledProject = styled.div`
 
   div {
     border-top: 0.5px solid ${theme.colors.seconderyFont};
-    padding: 16px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

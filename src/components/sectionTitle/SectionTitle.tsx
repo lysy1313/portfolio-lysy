@@ -36,7 +36,7 @@ const StyledH2 = styled.h2<SectionTitlePropsType>`
   &::after {
     content: "";
     display: block;
-    width: ${(props) => props.hightLine || "100%"};
+    width: ${(props) => (props.hightLine ? `${props.hightLine}` : "100%")};
     height: 1px;
     background: ${theme.colors.accent};
 

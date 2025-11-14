@@ -6,7 +6,7 @@ import { Container } from "../../../components/Container";
 import { S } from "./Skill_Styles";
 import React from "react";
 
-const skillsData = [
+export const skillsData = [
   {
     category: "Languages",
     list: ["TypeScript", "Lua", "Python", "JavaScript"],

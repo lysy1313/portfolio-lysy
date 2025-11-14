@@ -11,7 +11,7 @@ const items = [
   { nameItems: "home", hrefItem: "/" },
   { nameItems: "works", hrefItem: "/works" },
   { nameItems: "about-me", hrefItem: "/about-me" },
-  { nameItems: "contact", hrefItem: "/contact" },
+  { nameItems: "contacts", hrefItem: "/contacts" },
 ];
 
 export const Header: React.FC = () => {

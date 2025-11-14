@@ -33,6 +33,7 @@ const StyledDiv = styled.div`
 
   p {
     line-height: 25px;
+    height: 50px;
     margin: 32px 0 24px;
   }
 `;

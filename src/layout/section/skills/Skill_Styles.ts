@@ -4,7 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 
 //skills
 const StyledSkills = styled.section`
-  @media ${theme.media.tablet} {
+  @media ${theme.media.desktopMax} {
     ${FlexWrapper} {
       justify-content: center;
     }
@@ -25,7 +25,7 @@ const ImgSkill = styled.img`
 `;
 
 //Skill cart
-const StyledSkillCart = styled.div`
+export const StyledSkillCart = styled.div`
   width: 100%;
   height: 100%;
   display: grid;

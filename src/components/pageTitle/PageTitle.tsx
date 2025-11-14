@@ -23,7 +23,7 @@ export const PageTitle = (props: PageTitlePropsType) => {
 };
 
 const StyledPageTitle = styled.div`
-  margin: 120px 0 50px;
+  margin: 120px 0 0;
 `;
 
 const StyledH2 = styled.h2`

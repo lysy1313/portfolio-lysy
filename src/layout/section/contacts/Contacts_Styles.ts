@@ -4,6 +4,7 @@ import dotsWidthImg from "../../../assets/images/DotsWidth.svg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
 const StyledContacts = styled.section`
+  padding: 60px 0 140px;
   @media ${theme.media.tablet} {
     ${FlexWrapper} {
       justify-content: center;
@@ -62,16 +63,15 @@ const MessagePage = styled.div`
   flex-direction: column;
   gap: 8px;
 `;
+const MessageText = styled.p`
+  color: ${theme.colors.font};
+`;
 const Message = styled.ul`
   text-align: start;
   font-size: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-`;
-
-const MessageText = styled.p`
-  color: ${theme.colors.font};
 `;
 const TextAdress = styled.li`
   a {
