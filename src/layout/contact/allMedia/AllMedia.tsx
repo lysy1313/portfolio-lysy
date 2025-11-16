@@ -9,7 +9,7 @@ export const AllMedia = () => {
   return (
     <StyledAllMedia>
       <Container>
-        <SectionTitle textTitle="all-media" />
+        <SectionTitle textTitle="all-media" hightLine="0" />
         <S.Message>
           <S.TextAdress>
             <a href="">

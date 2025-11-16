@@ -11,7 +11,7 @@ export const SkillAboutMe = () => {
   return (
     <StyledSkillAboutMe>
       <Container>
-        <SectionTitle textTitle="skills" hightLine="0px" />
+        <SectionTitle textTitle="skills" hightLine="0" />
         <SkillCart skillData={skillsData} />
       </Container>
     </StyledSkillAboutMe>

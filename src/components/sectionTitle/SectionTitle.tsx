@@ -16,6 +16,7 @@ export const SectionTitle: React.FC<SectionTitlePropsType> = (
         <span>#</span>
         {props.textTitle}
       </StyledH2>
+      <Line hightLine={props.hightLine} />
     </StyledSectionTitle>
   );
 };
@@ -33,10 +34,10 @@ const StyledH2 = styled.h2<SectionTitlePropsType>`
   position: relative;
   font-size: 32px;
 
-  &::after {
+  /* &::after {
     content: "";
     display: block;
-    width: ${(props) => (props.hightLine ? `${props.hightLine}` : "100%")};
+    width: ${(props) => props.hightLine || "100%"};
     height: 1px;
     background: ${theme.colors.accent};
 
@@ -48,8 +49,24 @@ const StyledH2 = styled.h2<SectionTitlePropsType>`
     @media ${theme.media.mobile} {
       display: none;
     }
-  }
+  } */
   span {
     color: ${theme.colors.accent};
+  }
+`;
+
+const Line = styled.span<SectionTitlePropsType>`
+  display: block;
+  width: ${(props) => props.hightLine || "100%"};
+  height: 1px;
+  background: ${theme.colors.accent};
+
+  /* position: absolute;
+  right: -60%;
+  top: 20px;
+  transform: translateX(50%); */
+
+  @media ${theme.media.mobile} {
+    display: none;
   }
 `;

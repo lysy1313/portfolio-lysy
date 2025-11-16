@@ -10,10 +10,14 @@ import { S } from "./Main_Styles";
 import Typewriter from "typewriter-effect";
 
 export const Main: React.FC = () => {
-  const [contactMenuOpen, setContactMenuOpen] = useState(false);
+  const [contactMenuOpen, setContactMenuOpen] = useState<boolean | null>(null);
 
   const handleToggle = () => {
-    setContactMenuOpen(!contactMenuOpen);
+    if (contactMenuOpen === null) {
+      setContactMenuOpen(true);
+    } else {
+      setContactMenuOpen(!contactMenuOpen);
+    }
   };
 
   useEffect(() => {
@@ -27,9 +31,15 @@ export const Main: React.FC = () => {
   return (
     <S.StyledMain>
       <Container>
-        {contactMenuOpen === true ? (
-          <ContactForm closeForm={handleToggle} />
-        ) : null}
+        {contactMenuOpen ? (
+          <ContactForm
+            closeForm={handleToggle}
+            contactMenuOpen={contactMenuOpen}
+          />
+        ) : (
+          false
+        )}
+
         <FlexWrapper
           justify="space-between"
           align="center"

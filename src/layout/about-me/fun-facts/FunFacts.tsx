@@ -10,7 +10,7 @@ export const FunFacts = () => {
   return (
     <StyledFunFacts>
       <Container>
-        <SectionTitle textTitle="my-fun-facts" />
+        <SectionTitle textTitle="my-fun-facts" hightLine="0" />
         <FlexWrapper wrap="wrap">
           <InfoFunFacts>
             <TextFunFacts>I like winter more than summer</TextFunFacts>

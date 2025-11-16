@@ -26,7 +26,7 @@ const ImgDiv = styled.div`
   top: -50px;
 
   @media screen and (max-width: 887px) {
-    top: 0;
+    top: 10px;
   }
 
   &::after {

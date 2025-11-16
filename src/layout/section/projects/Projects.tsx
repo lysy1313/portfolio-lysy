@@ -55,7 +55,7 @@ export const Projects: React.FC = () => {
     <S.StyledProjects>
       <Container>
         <S.StyledProjectTitle>
-          <SectionTitle textTitle="projects" hightLine="511px" />
+          <SectionTitle textTitle="projects" hightLine="100%" />
           <Link to={"/works"}>
             <S.StyleBtnView>View all ~~&gt;</S.StyleBtnView>
           </Link>

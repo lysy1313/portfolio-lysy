@@ -1,7 +1,35 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { theme } from "../../styles/theme";
 
-const StyledContactForm = styled.div`
+type ContactFormType = {
+  contactMenuOpen: boolean | null;
+};
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0) rotateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateZ(360deg);
+    
+  }
+`;
+
+// Анимация исчезновения (Fade Out)
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    transform: scale(1) rotateZ(360deg);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0) rotateZ(0);
+  }
+`;
+
+const StyledContactForm = styled.div<ContactFormType>`
   height: 100vh;
   width: 100%;
   margin: 0 auto;
@@ -14,8 +42,10 @@ const StyledContactForm = styled.div`
   right: 0;
   bottom: 0;
   z-index: 9999999999999999;
-  background-color: rgba(111, 112, 114, 0.301);
+  background-color: rgba(111, 112, 114, 0);
   padding: 0 15px;
+  animation: ${(props) => (props.contactMenuOpen ? fadeIn : fadeOut)} 3s
+    forwards;
 `;
 
 const StyledFormPage = styled.div`
@@ -24,13 +54,19 @@ const StyledFormPage = styled.div`
   width: 100%;
   max-height: 350px;
   height: 100%;
-  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
+  border: 1px solid ${theme.colors.accent};
+  box-shadow: 0 20px 40px rgba(199, 120, 221, 0.2),
+    0 5px 15px rgba(199, 120, 221, 0.1);
+
   padding: 20px 15px;
+
+  position: relative;
 `;
 
 const CloseBtn = styled.button`

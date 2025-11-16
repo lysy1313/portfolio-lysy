@@ -33,7 +33,7 @@ const cubeRotation = keyframes`
 const CubeContainer = styled.div`
   width: 150px;
   height: 150px;
-  perspective: 800px; /* Создает 3D-пространство */
+  perspective: 1000px; /* Создает 3D-пространство */
   margin: 50px auto;
 `;
 
@@ -52,11 +52,9 @@ const Face = styled.div<CubeType>`
   position: absolute;
   width: 150px;
   height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   /* Полупрозрачность для лучшего вида 3D */
   background-color: rgba(255, 255, 255, 0.1);
+  z-index: 999999999999999;
 
   /* Стили для конкретных граней (используя пропсы или отдельные стили) */
   ${(props) =>
