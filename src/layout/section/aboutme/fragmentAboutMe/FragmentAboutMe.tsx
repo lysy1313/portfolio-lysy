@@ -7,6 +7,7 @@ import dotsImg from "../../../../assets/images/Dots.svg";
 import miniDotsImg from "../../../../assets/images/Dote 4x5.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { animateScroll } from "react-scroll";
 
 type FragmentAboutMeTypeProps = {
   displayTrue?: boolean;
@@ -42,7 +43,7 @@ export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
             newest technologies and frameworks.
           </S.TextAbout>
           {props.displayTrue ? (
-            <Link to={"/about-me"}>
+            <Link to={"/about-me"} onClick={() => animateScroll.scrollToTop()}>
               <StyledLinkBtn href="" primary>
                 Read more &rarr;
               </StyledLinkBtn>

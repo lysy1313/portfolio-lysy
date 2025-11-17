@@ -10,6 +10,7 @@ import { Container } from "../../../components/Container";
 import { S } from "./Projects_Styles";
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll } from "react-scroll";
 
 export const projectItems = [
   {
@@ -55,8 +56,8 @@ export const Projects: React.FC = () => {
     <S.StyledProjects>
       <Container>
         <S.StyledProjectTitle>
-          <SectionTitle textTitle="projects" hightLine="100%" />
-          <Link to={"/works"}>
+          <SectionTitle textTitle="projects" hightLine="20%" />
+          <Link to={"/works"} onClick={() => animateScroll.scrollToTop()}>
             <S.StyleBtnView>View all ~~&gt;</S.StyleBtnView>
           </Link>
         </S.StyledProjectTitle>

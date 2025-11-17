@@ -6,6 +6,7 @@ import { Home } from "./layout/home/Home";
 import ProjectsAll from "./layout/projects/ProjectsAll";
 import { AboutMePage } from "./layout/about-me/AboutMePage";
 import { ContactPage } from "./layout/contact/ContactPage";
+import { GoTopBtn } from "./components/goTopBtn/GoTopBtn";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contacts" element={<ContactPage />} />
       </Routes>
       <Footer />
+      <GoTopBtn />
     </div>
   );
 }
