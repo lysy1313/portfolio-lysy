@@ -6,7 +6,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/theme";
 
-export const FunFacts = () => {
+export const FunFacts: React.FC = () => {
   return (
     <StyledFunFacts>
       <Container>

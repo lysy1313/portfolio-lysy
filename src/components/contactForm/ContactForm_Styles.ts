@@ -8,11 +8,11 @@ type ContactFormType = {
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: scale(0) rotateZ(0);
+    transform: scale(0);
   }
   to {
     opacity: 1;
-    transform: scale(1) rotateZ(360deg);
+    transform: scale(1);
     
   }
 `;
@@ -21,11 +21,11 @@ const fadeIn = keyframes`
 const fadeOut = keyframes`
   from {
     opacity: 1;
-    transform: scale(1) rotateZ(360deg);
+    transform: scale(1);
   }
   to {
     opacity: 0;
-    transform: scale(0) rotateZ(0);
+    transform: scale(0);
   }
 `;
 

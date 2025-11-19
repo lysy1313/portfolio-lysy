@@ -67,6 +67,10 @@ const ImgDiv = styled.div`
       }
     }
 
+    @media screen and (max-width: 1530px) {
+      animation: none;
+    }
+
     @media ${theme.media.desktop} {
       display: block;
     }

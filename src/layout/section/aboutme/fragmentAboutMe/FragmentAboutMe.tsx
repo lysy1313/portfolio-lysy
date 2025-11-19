@@ -43,7 +43,10 @@ export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
             newest technologies and frameworks.
           </S.TextAbout>
           {props.displayTrue ? (
-            <Link to={"/about-me"} onClick={() => animateScroll.scrollToTop()}>
+            <Link
+              to={"/portfolio-lysy/about-me"}
+              onClick={() => animateScroll.scrollToTop()}
+            >
               <StyledLinkBtn href="" primary>
                 Read more &rarr;
               </StyledLinkBtn>

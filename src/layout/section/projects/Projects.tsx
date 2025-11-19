@@ -57,7 +57,10 @@ export const Projects: React.FC = () => {
       <Container>
         <S.StyledProjectTitle>
           <SectionTitle textTitle="projects" hightLine="20%" />
-          <Link to={"/works"} onClick={() => animateScroll.scrollToTop()}>
+          <Link
+            to={"/portfolio-lysy/works"}
+            onClick={() => animateScroll.scrollToTop()}
+          >
             <S.StyleBtnView>View all ~~&gt;</S.StyleBtnView>
           </Link>
         </S.StyledProjectTitle>
@@ -79,7 +82,7 @@ export const Projects: React.FC = () => {
             }
           })}
         </FlexWrapper>
-        <S.SquareRight></S.SquareRight>
+        <S.SquareRight />
       </Container>
     </S.StyledProjects>
   );

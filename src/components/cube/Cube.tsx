@@ -5,7 +5,7 @@ type CubeType = {
   type: string;
 };
 
-export const Cube = () => {
+export const Cube: React.FC = () => {
   return (
     <CubeContainer>
       <CubeArea>

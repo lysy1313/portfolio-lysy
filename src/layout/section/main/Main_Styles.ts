@@ -152,7 +152,7 @@ const StyledFieldSet = styled.div`
     right: -340px;
     display: none;
 
-    animation: rotateXSquare 5s infinite ease-in-out;
+    /* animation: rotateXSquare 5s infinite ease-in-out;
 
     &:hover {
       animation-play-state: paused;
@@ -169,9 +169,9 @@ const StyledFieldSet = styled.div`
       100% {
         transform: rotate(-180deg) translateY(0);
       }
-    }
+    } */
 
-    @media ${theme.media.desktop} {
+    @media screen and (min-width: 1500px) {
       display: block;
     }
   }

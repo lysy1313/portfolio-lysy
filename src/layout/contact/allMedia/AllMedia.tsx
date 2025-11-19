@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { S } from "../../section/contacts/Contacts_Styles";
 import { Icon } from "../../../components/icon/Icon";
 
-export const AllMedia = () => {
+export const AllMedia: React.FC = () => {
   return (
     <StyledAllMedia>
       <Container>

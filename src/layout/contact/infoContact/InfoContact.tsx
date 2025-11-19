@@ -6,7 +6,7 @@ import { Icon } from "../../../components/icon/Icon";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/theme";
 
-export const InfoContact = () => {
+export const InfoContact: React.FC = () => {
   return (
     <StyledInfoContact>
       <Container>

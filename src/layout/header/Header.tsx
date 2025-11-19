@@ -8,10 +8,10 @@ import { S } from "./Header_Styles";
 import { Media } from "./media/Media";
 
 const items = [
-  { nameItems: "home", hrefItem: "/" },
-  { nameItems: "works", hrefItem: "/works" },
-  { nameItems: "about-me", hrefItem: "/about-me" },
-  { nameItems: "contacts", hrefItem: "/contacts" },
+  { nameItems: "home", hrefItem: "/portfolio-lysy/" },
+  { nameItems: "works", hrefItem: "/portfolio-lysy/works" },
+  { nameItems: "about-me", hrefItem: "/portfolio-lysy/about-me" },
+  { nameItems: "contacts", hrefItem: "/portfolio-lysy/contacts" },
 ];
 
 export const Header: React.FC = () => {

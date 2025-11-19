@@ -7,7 +7,7 @@ import { projectItems } from "../../../section/projects/Projects";
 import { Project } from "../../../section/projects/project/Project";
 import { theme } from "../../../../styles/theme";
 
-export const CompletedApps = () => {
+export const CompletedApps: React.FC = () => {
   return (
     <StyledCompletedApps>
       <Container>

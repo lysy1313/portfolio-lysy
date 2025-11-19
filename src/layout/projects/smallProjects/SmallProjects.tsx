@@ -59,7 +59,7 @@ const smallProjectItems = [
   },
 ];
 
-export const SmallProjects = () => {
+export const SmallProjects: React.FC = () => {
   return (
     <StyledSmallProjects>
       <Container>

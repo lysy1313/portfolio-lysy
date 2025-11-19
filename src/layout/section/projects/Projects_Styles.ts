@@ -30,29 +30,32 @@ const SquareRight = styled.span`
   display: none;
   /* box-shadow: 0 10px 5px -5px rgba(255, 255, 255, 0.36); */
 
-  animation: rotateSquare 5s infinite ease-in-out;
+  /* animation: rotateSquare 5s infinite ease-in-out;
 
   &:hover {
     animation-play-state: paused;
-  }
+  } */
 
-  @media ${theme.media.desktop} {
+  @media screen and (min-width: 1460px) {
     display: block;
   }
 
-  @keyframes rotateSquare {
+  /* @keyframes rotateSquare {
     0% {
       transform: rotateY(0) translateY(0);
+      overflow: hidden;
     }
 
     50% {
       transform: rotateY(360deg) translateY(-295px);
+      overflow: hidden;
     }
 
     100% {
       transform: rotateY(-360deg) translateY(0);
+      overflow: hidden;
     }
-  }
+  } */
 `;
 
 const StyleBtnView = styled.a``;

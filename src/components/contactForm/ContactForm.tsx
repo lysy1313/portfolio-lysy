@@ -1,8 +1,9 @@
-import React, { ElementRef, useRef, useState } from "react";
+import React, { ElementRef, FormEvent, useRef, useState } from "react";
 import { Button } from "../Button";
 import { S } from "./ContactForm_Styles";
 import emailjs from "@emailjs/browser";
 import { ModalWarning } from "../modalWarning/ModalWarning";
+import { Spinner } from "../spinner/Spinner";
 // import { motion } from "motion/react";
 
 type FormTypeProps = {
@@ -16,6 +17,7 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
   const [titleMessage, setTitleMessage] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isColor, setIsColor] = useState<string | null>(null);
+  const [spinner, setSpinner] = useState(false);
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -23,35 +25,39 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
     setIsColor(null);
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.current) return;
 
+    setSpinner(true);
     emailjs
       .sendForm("service_1vlrsbi", "template_udsi22r", form.current, {
         publicKey: "gVP_hMOVbsZwFms1D",
       })
       .then(
         () => {
+          setSpinner(false);
+          setIsModalOpen(true);
           setTitleMessage("SUCSSES!");
           setWarningMessage("Your message has been sent!");
-          setIsModalOpen(true);
           setIsColor("green");
         },
         (error) => {
+          setSpinner(false);
+          setIsModalOpen(true);
           setTitleMessage("FAILD!");
           setWarningMessage(`Your message was not sent! ${error.text}`);
-          setIsModalOpen(true);
           setIsColor("red");
         }
       );
-    e.target.reset();
+    (e.target as HTMLFormElement).reset();
   };
 
   return (
     <S.StyledContactForm contactMenuOpen={props.contactMenuOpen} id="contact">
       <S.StyledFormPage>
+        {spinner && <Spinner />}
         {isModalOpen && warningMessage && (
           <ModalWarning
             titleMessage={titleMessage}

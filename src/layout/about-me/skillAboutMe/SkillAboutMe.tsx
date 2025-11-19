@@ -7,7 +7,7 @@ import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { SkillCart } from "../../section/skills/skill/SkillCart";
 import { skillsData } from "../../section/skills/Skills";
 
-export const SkillAboutMe = () => {
+export const SkillAboutMe: React.FC = () => {
   return (
     <StyledSkillAboutMe>
       <Container>
