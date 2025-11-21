@@ -47,11 +47,12 @@ const StyledMobileMenu = styled.nav`
 const StyledLogo = styled.div`
   position: absolute;
   top: 30px;
-  left: 20px;
-  transform: scale(1.2);
+  /* left: 20px; */
+  /* transform: scale(1.2); */
 `;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
+  transform: translateX(-100%);
   position: fixed;
   top: 0;
   right: 0;
@@ -64,20 +65,29 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
   padding: 95px 0 16px 16px;
 
-  ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: flex-start;
-      align-items: start;
-    `};
+  transition: 5s ease-in-out;
 
   ul {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     align-items: start;
     flex-direction: column;
+
+    transition: 1s ease-in-out;
   }
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      transform: translateX(0);
+      display: flex;
+      justify-content: flex-start;
+      align-items: start;
+      text-align: start;
+      ul {
+        gap: 30px;
+      }
+    `};
 `;
 
 const Burgerbutton = styled.button<{ isOpen: boolean }>`

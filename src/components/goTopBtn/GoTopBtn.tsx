@@ -32,7 +32,7 @@ const StyledGoTopBtn = styled.button`
   position: fixed;
   right: 30px;
   bottom: 30px;
-  z-index: 9999999999;
+  z-index: 9999;
   svg {
     stroke: ${theme.colors.seconderyFont};
     &:hover {

@@ -1,7 +1,7 @@
 import { LanguageSwitch } from "../../../components/languageSwitch/LanguageSwitch";
 import { Logo } from "../../../components/logo/Logo";
 import { MobileMedia } from "../mobileMedia/MobileMedia";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { S } from "../Header_Styles";
 import { MenuItemsType } from "../menu/Menu";
 import { Link } from "react-router-dom";
@@ -14,6 +14,14 @@ export const MobileMenu: React.FC<{
   const handleToggle = () => {
     setBurgerMenuIsOpen(!burgerMenuIsOpen);
   };
+
+  useEffect(() => {
+    if (burgerMenuIsOpen) {
+      document.body.classList.add("no-scroll"); // Добавляем класс при открытии
+    } else {
+      document.body.classList.remove("no-scroll"); // Удаляем при закрытии
+    }
+  }, [burgerMenuIsOpen]);
 
   return (
     <S.StyledMobileMenu>

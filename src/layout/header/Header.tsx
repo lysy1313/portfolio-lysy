@@ -31,16 +31,11 @@ export const Header: React.FC = () => {
       <Container>
         <Media />
         <FlexWrapper justify="space-between" align="center" wrap="wrap">
+          <Logo />
           {width < breakpoint ? (
-            <>
-              <Logo />
-              <MobileMenu menuItems={items} />
-            </>
+            <MobileMenu menuItems={items} />
           ) : (
-            <>
-              <Logo />
-              <Menu menuItems={items} />
-            </>
+            <Menu menuItems={items} />
           )}
         </FlexWrapper>
       </Container>
