@@ -13,8 +13,8 @@ export const SkillCart: React.FC<SkillPropsType> = (props: SkillPropsType) => {
     <S.StyledSkillCart>
       {props.skillData.map((skillGroup, index: number) => {
         return (
-          <S.GridSkillItem>
-            <S.SkillsColumn key={index}>
+          <S.GridSkillItem key={index}>
+            <S.SkillsColumn>
               <S.CategoryTitle>{skillGroup.category}</S.CategoryTitle>
               <S.SkillsList>
                 {skillGroup.list.map((skill: string, skillIndex: number) => (

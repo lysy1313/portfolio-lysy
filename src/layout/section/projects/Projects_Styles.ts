@@ -58,8 +58,6 @@ const SquareRight = styled.span`
   } */
 `;
 
-const StyleBtnView = styled.a``;
-
 //project
 const StyledProject = styled.div`
   max-width: 330px;
@@ -108,7 +106,6 @@ export const S = {
   StyledProjects,
   StyledProjectTitle,
   SquareRight,
-  StyleBtnView,
   StyledProject,
   Img,
   ListTopic,

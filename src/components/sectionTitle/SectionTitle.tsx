@@ -7,16 +7,17 @@ type SectionTitlePropsType = {
   hightLine: string;
 };
 
-export const SectionTitle: React.FC<SectionTitlePropsType> = (
-  props: SectionTitlePropsType
-) => {
+export const SectionTitle: React.FC<SectionTitlePropsType> = ({
+  textTitle,
+  hightLine,
+}: SectionTitlePropsType) => {
   return (
     <StyledSectionTitle>
       <StyledH2>
         <span>#</span>
-        {props.textTitle}
+        {textTitle}
       </StyledH2>
-      <Line hightLine={props.hightLine} />
+      <Line $hightLine={hightLine} />
     </StyledSectionTitle>
   );
 };
@@ -39,10 +40,10 @@ const StyledH2 = styled.h2`
   }
 `;
 
-const Line = styled.span<SectionTitlePropsType>`
+const Line = styled.span<{ $hightLine: string }>`
   display: block;
   max-width: 511px;
-  width: ${(props) => props.hightLine};
+  width: ${(props) => props.$hightLine || "100%"};
   height: 1px;
   background: ${theme.colors.accent};
 

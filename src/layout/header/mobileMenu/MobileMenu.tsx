@@ -25,11 +25,11 @@ export const MobileMenu: React.FC<{
 
   return (
     <S.StyledMobileMenu>
-      <S.Burgerbutton onClick={handleToggle} isOpen={burgerMenuIsOpen}>
+      <S.Burgerbutton onClick={handleToggle} isopen={burgerMenuIsOpen}>
         <span></span>
       </S.Burgerbutton>
 
-      <S.MobileMenuPopup isOpen={burgerMenuIsOpen}>
+      <S.MobileMenuPopup isopen={burgerMenuIsOpen}>
         <S.StyledLogo>
           <Logo />
         </S.StyledLogo>

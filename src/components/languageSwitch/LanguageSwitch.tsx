@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Icon } from "../icon/Icon";
 import { S } from "./LanguageSwitch_Styles";
 
-const languages = ["EN", "RU", "UA"];
+const languages = ["EN", "RU"];
 
 export const LanguageSwitch = () => {
   const [isOpen, setIsOpen] = useState(false);

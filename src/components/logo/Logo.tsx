@@ -17,7 +17,7 @@ export const Logo: React.FC = () => {
   );
 };
 
-const StyledLinkLogo = styled.a`
+const StyledLinkLogo = styled.span`
   text-decoration: none;
   display: flex;
   justify-content: center;

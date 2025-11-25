@@ -61,7 +61,7 @@ export const Projects: React.FC = () => {
             to={"/portfolio-lysy/works"}
             onClick={() => animateScroll.scrollToTop()}
           >
-            <S.StyleBtnView>View all ~~&gt;</S.StyleBtnView>
+            View all ~~&gt;
           </Link>
         </S.StyledProjectTitle>
 

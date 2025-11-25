@@ -47,9 +47,7 @@ export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
               to={"/portfolio-lysy/about-me"}
               onClick={() => animateScroll.scrollToTop()}
             >
-              <StyledLinkBtn href="" primary>
-                Read more &rarr;
-              </StyledLinkBtn>
+              <StyledLinkBtn primary>Read more &rarr;</StyledLinkBtn>
             </Link>
           ) : (
             false

@@ -14,6 +14,7 @@ export const GlobalStyled = createGlobalStyle`
     * {
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
+        scroll-behavior: smooth;
     }
 
     body {

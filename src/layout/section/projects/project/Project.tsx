@@ -23,7 +23,7 @@ export const Project: React.FC<ProjectPropsItemsType> = (
         <S.Parag>{props.textParag}</S.Parag>
         <div className="divBtn">
           {props.linkLive != null ? (
-            <StyledLinkBtn href={props.linkLive} primary>
+            <StyledLinkBtn href={props.linkLive} primary={true}>
               Live &lt;~&gt;
             </StyledLinkBtn>
           ) : (
@@ -31,7 +31,7 @@ export const Project: React.FC<ProjectPropsItemsType> = (
           )}
 
           {props.linkCached != null ? (
-            <StyledLinkBtn href={props.linkCached} outlined>
+            <StyledLinkBtn href={props.linkCached} outlined={true}>
               Cached &#x2265;
             </StyledLinkBtn>
           ) : (

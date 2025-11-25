@@ -51,8 +51,7 @@ const StyledLogo = styled.div`
   /* transform: scale(1.2); */
 `;
 
-const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  transform: translateX(-100%);
+const MobileMenuPopup = styled.div<{ isopen: boolean }>`
   position: fixed;
   top: 0;
   right: 0;
@@ -60,12 +59,13 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   z-index: 99999999;
   background-color: rgba(40, 44, 51, 1);
-  display: none;
+  /* display: none; */
   font-size: 32px;
+  transform: translateX(200%);
 
   padding: 95px 0 16px 16px;
 
-  transition: 5s ease-in-out;
+  transition: 1s ease-in-out;
 
   ul {
     display: flex;
@@ -73,12 +73,12 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     align-items: start;
     flex-direction: column;
 
-    transition: 1s ease-in-out;
+    transition: 1.5s ease-in-out;
   }
 
   ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+    props.isopen &&
+    css<{ isopen: boolean }>`
       transform: translateX(0);
       display: flex;
       justify-content: flex-start;
@@ -90,7 +90,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     `};
 `;
 
-const Burgerbutton = styled.button<{ isOpen: boolean }>`
+const Burgerbutton = styled.button<{ isopen: boolean }>`
   position: fixed;
   top: -100px;
   right: -100px;
@@ -108,8 +108,8 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
     bottom: 60px;
 
     ${(props) =>
-      props.isOpen &&
-      css<{ isOpen: boolean }>`
+      props.isopen &&
+      css<{ isopen: boolean }>`
         background-color: rgba(255, 255, 255, 0);
       `}
 
@@ -123,8 +123,8 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
       display: none;
 
       ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
+        props.isopen &&
+        css<{ isopen: boolean }>`
           display: block;
           transform: rotate(-45deg) translateY(0);
         `}
@@ -140,8 +140,8 @@ const Burgerbutton = styled.button<{ isOpen: boolean }>`
       transform: translateY(10px);
 
       ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
+        props.isopen &&
+        css<{ isopen: boolean }>`
           transform: rotate(45deg) translateY(0);
           width: 24px;
         `}
