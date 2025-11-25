@@ -11,6 +11,7 @@ import { S } from "./Projects_Styles";
 import React from "react";
 import { Link } from "react-router-dom";
 import { animateScroll } from "react-scroll";
+import { Fade } from "react-awesome-reveal";
 
 export const projectItems = [
   {
@@ -66,21 +67,23 @@ export const Projects: React.FC = () => {
         </S.StyledProjectTitle>
 
         <FlexWrapper justify="space-around" align="start" wrap="wrap">
-          {projectItems.map((proj, index: number) => {
-            if (index < 3) {
-              return (
-                <Project
-                  key={index}
-                  cartImg={proj.cartImg}
-                  textTopic={proj.textTopic}
-                  headline={proj.headline}
-                  textParag={proj.textParag}
-                  linkLive={proj.linkLive}
-                  linkCached={proj.linkCached}
-                />
-              );
-            }
-          })}
+          <Fade cascade={true} damping={0.1}>
+            {projectItems.map((proj, index: number) => {
+              if (index < 3) {
+                return (
+                  <Project
+                    key={index}
+                    cartImg={proj.cartImg}
+                    textTopic={proj.textTopic}
+                    headline={proj.headline}
+                    textParag={proj.textParag}
+                    linkLive={proj.linkLive}
+                    linkCached={proj.linkCached}
+                  />
+                );
+              }
+            })}
+          </Fade>
         </FlexWrapper>
         <S.SquareRight />
       </Container>

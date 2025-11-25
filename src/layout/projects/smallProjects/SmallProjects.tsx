@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Project } from "../../section/projects/project/Project";
 import { S } from "../../section/projects/Projects_Styles";
 import { theme } from "../../../styles/theme";
+import { Fade } from "react-awesome-reveal";
 
 const smallProjectItems = [
   {
@@ -65,19 +66,26 @@ export const SmallProjects: React.FC = () => {
       <Container>
         <SectionTitle textTitle="small-projects" hightLine="0" />
         <GridSmallProjects>
-          {smallProjectItems.map((smProj, index: number) => {
-            return (
-              <SallPoject>
-                <Project
-                  key={index}
-                  textTopic={smProj.textTopic}
-                  headline={smProj.headline}
-                  textParag={smProj.textParag}
-                  linkLive={smProj.linkLive}
-                />
-              </SallPoject>
-            );
-          })}
+          <Fade
+            cascade={true}
+            damping={0.1}
+            triggerOnce={true}
+            direction={"up"}
+          >
+            {smallProjectItems.map((smProj, index: number) => {
+              return (
+                <SallPoject>
+                  <Project
+                    key={index}
+                    textTopic={smProj.textTopic}
+                    headline={smProj.headline}
+                    textParag={smProj.textParag}
+                    linkLive={smProj.linkLive}
+                  />
+                </SallPoject>
+              );
+            })}
+          </Fade>
         </GridSmallProjects>
       </Container>
     </StyledSmallProjects>

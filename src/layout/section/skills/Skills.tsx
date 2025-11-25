@@ -5,6 +5,7 @@ import ImageSkill from "../../../assets/images/ImageSkill.png";
 import { Container } from "../../../components/Container";
 import { S } from "./Skill_Styles";
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 export const skillsData = [
   {
@@ -45,10 +46,14 @@ export const Skills: React.FC = () => {
         <SectionTitle textTitle="skills" hightLine="20%" />
 
         <FlexWrapper justify="space-between" align="flex-start" wrap="wrap">
-          <S.ImgSkill src={ImageSkill} />
-          <S.StyledSkillDiv>
-            <SkillCart skillData={skillsData} />
-          </S.StyledSkillDiv>
+          <Fade cascade={true} damping={-0.1} direction="left">
+            <S.ImgSkill src={ImageSkill} />
+          </Fade>
+          <Fade cascade={true} damping={-0.1} direction="right">
+            <S.StyledSkillDiv>
+              <SkillCart skillData={skillsData} />
+            </S.StyledSkillDiv>
+          </Fade>
         </FlexWrapper>
       </Container>
     </S.StyledSkills>

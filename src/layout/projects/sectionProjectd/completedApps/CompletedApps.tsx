@@ -6,6 +6,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { projectItems } from "../../../section/projects/Projects";
 import { Project } from "../../../section/projects/project/Project";
 import { theme } from "../../../../styles/theme";
+import { Fade } from "react-awesome-reveal";
 
 export const CompletedApps: React.FC = () => {
   return (
@@ -13,19 +14,21 @@ export const CompletedApps: React.FC = () => {
       <Container>
         <SectionTitle textTitle="completed-apps" hightLine="0" />
         <FlexWrapper align="start" wrap="wrap">
-          {projectItems.map((proj, index: number) => {
-            return (
-              <Project
-                key={index}
-                cartImg={proj.cartImg}
-                textTopic={proj.textTopic}
-                headline={proj.headline}
-                textParag={proj.textParag}
-                linkLive={proj.linkLive}
-                linkCached={proj.linkCached}
-              />
-            );
-          })}
+          <Fade cascade={true} damping={0.1}>
+            {projectItems.map((proj, index: number) => {
+              return (
+                <Project
+                  key={index}
+                  cartImg={proj.cartImg}
+                  textTopic={proj.textTopic}
+                  headline={proj.headline}
+                  textParag={proj.textParag}
+                  linkLive={proj.linkLive}
+                  linkCached={proj.linkCached}
+                />
+              );
+            })}
+          </Fade>
         </FlexWrapper>
       </Container>
     </StyledCompletedApps>

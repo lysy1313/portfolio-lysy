@@ -5,28 +5,29 @@ import funImg from "../../../assets/images/funImg.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/theme";
+import { Fade } from "react-awesome-reveal";
+
+const funFactsData = [
+  "I like winter more than summer",
+  "I often bike with my friends",
+  "I like pizza and pasta",
+  "I was in Lithuania, Poland and Russia",
+  "My favorite movie is The Green Mile",
+  "I graduated from the Belarusian National Technical University",
+];
 
 export const FunFacts: React.FC = () => {
   return (
     <StyledFunFacts>
       <Container>
         <SectionTitle textTitle="my-fun-facts" hightLine="0" />
-        <FlexWrapper wrap="wrap">
+        <FlexWrapper wrap="wrap" gap="20px">
           <InfoFunFacts>
-            <TextFunFacts>I like winter more than summer</TextFunFacts>
-            <TextFunFacts>I often bike with my friends</TextFunFacts>
-            <TextFunFacts>
-              I like <Strong>pizza</Strong> and <Strong>pasta</Strong>{" "}
-            </TextFunFacts>
-            <TextFunFacts>
-              I was in <Strong>Egypt</Strong>, <Strong>Poland</Strong> and{" "}
-              <Strong>Turkey</Strong>
-            </TextFunFacts>
-            <TextFunFacts>
-              My favorite movie is <Strong>The Green Mile</Strong>
-            </TextFunFacts>
-            <TextFunFacts>I am still in school</TextFunFacts>
-            <TextFunFacts>I don’t have any siblings</TextFunFacts>
+            <Fade cascade={true} damping={1.2} className="animate__hinge">
+              {funFactsData.map((ffText) => {
+                return <TextFunFacts>{ffText}</TextFunFacts>;
+              })}
+            </Fade>
           </InfoFunFacts>
           <PageImg>
             <Img src={funImg} />
@@ -65,7 +66,6 @@ const TextFunFacts = styled.p`
   line-height: 100%;
   padding: 8px;
 `;
-const Strong = styled.span``;
 
 const PageImg = styled.div`
   max-width: 300px;

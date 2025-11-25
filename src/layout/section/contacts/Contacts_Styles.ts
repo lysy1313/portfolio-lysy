@@ -53,7 +53,7 @@ const TextContacts = styled.p`
 
 const MessagePage = styled.div`
   border: 0.5px solid ${theme.colors.seconderyFont};
-  width: 200px;
+  width: 300px;
   height: 140px;
 
   padding: 16px;

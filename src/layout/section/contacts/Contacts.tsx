@@ -18,8 +18,9 @@ export const Contacts: React.FC = () => {
         >
           <FlexWrapper justify="flex-start" align="flex-start">
             <S.TextContacts>
-              I’m interested in freelance opportunities. However, if you have
-              other request or question, don’t hesitate to contact me
+              I'm interested in employment opportunities. However, if you have
+              any other requests or questions, please don't hesitate to contact
+              me.
             </S.TextContacts>
           </FlexWrapper>
 
@@ -27,14 +28,14 @@ export const Contacts: React.FC = () => {
             <S.MessageText>Message me here</S.MessageText>
             <S.Message>
               <S.TextAdress>
-                <a href="">
+                <a href="https://discord.com/channels/660813608757886991">
                   <Icon
                     iconId="discord"
                     height="32px"
                     width="32px"
                     viewBox="0 0 32 32"
                   />
-                  !Elias#3519
+                  lysy.i
                 </a>
               </S.TextAdress>
               <S.TextAdress>
@@ -45,7 +46,7 @@ export const Contacts: React.FC = () => {
                     width="32px"
                     viewBox="0 0 32 32"
                   />
-                  elias@elias.me
+                  lysy.ilya1313@gmail.com
                 </a>
               </S.TextAdress>
             </S.Message>

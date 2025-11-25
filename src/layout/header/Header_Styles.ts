@@ -71,7 +71,9 @@ const MobileMenuPopup = styled.div<{ isopen: boolean }>`
     display: flex;
     gap: 10px;
     align-items: start;
+    justify-content: flex-start;
     flex-direction: column;
+    text-align: start;
 
     transition: 1.5s ease-in-out;
   }
@@ -85,6 +87,7 @@ const MobileMenuPopup = styled.div<{ isopen: boolean }>`
       align-items: start;
       text-align: start;
       ul {
+        text-align: start;
         gap: 30px;
       }
     `};
