@@ -57,7 +57,7 @@ export const Projects: React.FC = () => {
     <S.StyledProjects>
       <Container>
         <S.StyledProjectTitle>
-          <SectionTitle textTitle="projects" hightLine="20%" />
+          <SectionTitle textTitle="projects" hightLine="50%" />
           <Link
             to={"/portfolio-lysy/works"}
             onClick={() => animateScroll.scrollToTop()}

@@ -23,6 +23,7 @@ export const SectionTitle: React.FC<SectionTitlePropsType> = ({
 };
 
 const StyledSectionTitle = styled.div`
+  width: 80%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
