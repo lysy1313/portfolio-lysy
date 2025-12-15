@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { ContactForm } from "../../../components/contactForm/ContactForm";
 import { S } from "./Main_Styles";
 import Typewriter from "typewriter-effect";
+import { Fade } from "react-awesome-reveal";
 
 export const Main: React.FC = () => {
   const [contactMenuOpen, setContactMenuOpen] = useState<boolean | null>(null);
@@ -54,7 +55,7 @@ export const Main: React.FC = () => {
               gap="0px"
             >
               <h1>
-                Elias is a <S.StyledStrong>web designer</S.StyledStrong> and{" "}
+                Lysy is a <S.StyledStrong>web designer</S.StyledStrong> and{" "}
                 <S.StyledStrong>front-end</S.StyledStrong> developer
               </h1>
 
@@ -79,24 +80,28 @@ export const Main: React.FC = () => {
             direction="column"
             gap="0"
           >
-            <S.ImgPage>
-              <S.ImgMan src={cartImg} alt="Man" />
-              <S.ImgLogo src={logoImg} alt="Logo" />
-              <S.DoteDiv>
-                <Icon
-                  iconId="dote"
-                  height="84px"
-                  width="84px"
-                  viewBox="0 0 84 84"
-                />
-              </S.DoteDiv>
-            </S.ImgPage>
-            <S.ParDiv>
-              <S.Square></S.Square>
-              <p>
-                Currently working on <strong>Portfolio</strong>
-              </p>
-            </S.ParDiv>
+            <Fade cascade={true} damping={0.1}>
+              <S.ImgPage>
+                <S.ImgMan src={cartImg} alt="Man" />
+                <S.ImgLogo src={logoImg} alt="Logo" />
+                <S.DoteDiv>
+                  <Icon
+                    iconId="dote"
+                    height="84px"
+                    width="84px"
+                    viewBox="0 0 84 84"
+                  />
+                </S.DoteDiv>
+              </S.ImgPage>
+            </Fade>
+            <Fade cascade={true} damping={0.1}>
+              <S.ParDiv>
+                <S.Square></S.Square>
+                <p>
+                  Currently working on <strong>Portfolio</strong>
+                </p>
+              </S.ParDiv>
+            </Fade>
           </FlexWrapper>
         </FlexWrapper>
         <FlexWrapper justify="center" align="center">

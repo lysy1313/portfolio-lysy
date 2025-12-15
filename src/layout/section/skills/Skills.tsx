@@ -10,32 +10,23 @@ import { Fade } from "react-awesome-reveal";
 export const skillsData = [
   {
     category: "Languages",
-    list: ["TypeScript", "Lua", "Python", "JavaScript"],
+    list: ["TypeScript", "JavaScript"],
   },
   {
     category: "Databases",
-    list: ["SQLite", "PostgreSQL", "Mongo"],
+    list: ["PostgreSQL", "Monogo"],
   },
   {
     category: "Tools",
-    list: [
-      "VSCode",
-      "Neovim",
-      "Linux",
-      "Figma",
-      "XFCE",
-      "Arch",
-      "Git",
-      "Font Awesome",
-    ],
+    list: ["VSCode", "Figma", "Git", "Git Bash", "Material UI"],
   },
   {
     category: "Other",
-    list: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
+    list: ["HTML", "CSS", "SASS", "SCSS", "Styled components"],
   },
   {
     category: "Frameworks",
-    list: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
+    list: ["React"],
   },
 ];
 

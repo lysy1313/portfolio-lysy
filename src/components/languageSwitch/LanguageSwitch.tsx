@@ -15,6 +15,7 @@ export const LanguageSwitch = () => {
   const handleSelectLanguage = (lang: string) => {
     setSelectedLanguage(lang);
     setIsOpen(false);
+    localStorage.setItem("language", lang);
   };
   return (
     <S.DropdownContainer>

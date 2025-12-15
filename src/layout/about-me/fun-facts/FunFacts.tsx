@@ -10,11 +10,30 @@ import { Fade } from "react-awesome-reveal";
 const funFactsData = [
   "I like winter more than summer",
   "I often bike with my friends",
-  "I like pizza and pasta",
-  "I was in Lithuania, Poland and Russia",
-  "My favorite movie is The Green Mile",
-  "I graduated from the Belarusian National Technical University",
+  "I like *pizza* and *pasta*",
+  "I was in *Lithuania*, *Poland* and *Russia*",
+  "My favorite movie is *The Green Mile*",
+  "I graduated from the *Belarusian National Technical University*",
 ];
+
+// const funFactsData = {
+//   ["EN"]: [
+//     "I like winter more than summer",
+//     "I often bike with my friends",
+//     "I like *pizza* and *pasta*",
+//     "I was in *Lithuania*, *Poland* and *Russia*",
+//     "My favorite movie is *The Green Mile*",
+//     "I graduated from the *Belarusian National Technical University*",
+//   ],
+//   ["RU"]: [
+//     "Зима мне нравится больше, чем лето.",
+//     "Я часто катаюсь на велосипеде с друзьями.",
+//     "Мне нравятся *пицца* и *паста*.",
+//     "Я побывал в *Литве*, *Польше* и *России*.",
+//     "Мой любимый фильм — *Зелёная миля*.",
+//     "Я окончил *Белорусский национальный технический университет*.",
+//   ],
+// };
 
 export const FunFacts: React.FC = () => {
   return (
@@ -24,8 +43,15 @@ export const FunFacts: React.FC = () => {
         <FlexWrapper wrap="wrap" gap="20px">
           <InfoFunFacts>
             <Fade cascade={true} damping={1.2} className="animate__hinge">
-              {funFactsData.map((ffText) => {
-                return <TextFunFacts>{ffText}</TextFunFacts>;
+              {funFactsData.map((ffText, index: number) => {
+                const parts = ffText.split(/(\*.*?\*)/g);
+                const arrFFtext = parts.map((part, index) => {
+                  if (part.startsWith("*") && part.endsWith("*")) {
+                    return <strong key={index}>{part.slice(1, -1)}</strong>;
+                  }
+                  return part;
+                });
+                return <TextFunFacts key={index}>{arrFFtext}</TextFunFacts>;
               })}
             </Fade>
           </InfoFunFacts>

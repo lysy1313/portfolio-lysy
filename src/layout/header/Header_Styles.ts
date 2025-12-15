@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/theme";
+import { FlexWrapper } from "../../components/FlexWrapper";
+import { Container } from "../../components/Container";
 
 //Header
 const StyleHeader = styled.header`
@@ -9,6 +11,11 @@ const StyleHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 99999;
+  /* background-color: rgba(40, 44, 51, 0.8);
+
+  ${FlexWrapper},${Container} {
+    background-color: rgba(40, 44, 51, 0.8);
+  } */
 `;
 
 //Mobile menu
@@ -58,7 +65,7 @@ const MobileMenuPopup = styled.div<{ isopen: boolean }>`
   left: 0;
   bottom: 0;
   z-index: 99999999;
-  background-color: rgba(40, 44, 51, 1);
+  background-color: rgba(40, 44, 51, 0.8);
   /* display: none; */
   font-size: 32px;
   transform: translateX(200%);
