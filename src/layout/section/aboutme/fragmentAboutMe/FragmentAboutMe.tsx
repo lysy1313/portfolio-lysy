@@ -50,7 +50,7 @@ export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
                 to={"/portfolio-lysy/about-me"}
                 onClick={() => animateScroll.scrollToTop()}
               >
-                <StyledLinkBtn primary>
+                <StyledLinkBtn $primary>
                   {t("pages.fragmentAboutMe.buttons.readMore")} &rarr;
                 </StyledLinkBtn>
               </Link>
