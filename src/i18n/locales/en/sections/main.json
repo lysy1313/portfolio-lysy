@@ -1,0 +1,18 @@
+{
+  "mainTitle": {
+    "firstPart": "Lysy is a ",
+    "foundPart": "web designer",
+    "thirdPart": " and",
+    "fourPart": "front-end",
+    "fivePart": " developer"
+  },
+  "paragraph": "He crafts responsive websites where technologies meet creativity",
+  "paragraphAfterPhoto": {
+    "firstPart": "Currently working on",
+    "foundPart": "TODO"
+  },
+  "fieldSet": {
+    "textQuote": "With great power comes great electricity bill",
+    "name": "- Dr. Who"
+  }
+}

@@ -31,7 +31,7 @@ const StyledDiv = styled.div`
     font-size: 32px;
   }
 
-  p {
+  .typewriter-wrapper {
     line-height: 25px;
     height: 50px;
     margin: 32px 0 24px;
@@ -151,25 +151,6 @@ const StyledFieldSet = styled.div`
     top: 15px;
     right: -340px;
     display: none;
-
-    /* animation: rotateXSquare 5s infinite ease-in-out;
-
-    &:hover {
-      animation-play-state: paused;
-    }
-    @keyframes rotateXSquare {
-      0% {
-        transform: rotate(0) translateY(0);
-      }
-
-      50% {
-        transform: rotate(180deg) translateY(-175px);
-      }
-
-      100% {
-        transform: rotate(-180deg) translateY(0);
-      }
-    } */
 
     @media screen and (min-width: 1500px) {
       display: block;

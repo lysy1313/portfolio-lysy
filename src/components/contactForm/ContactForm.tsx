@@ -4,6 +4,7 @@ import { S } from "./ContactForm_Styles";
 import emailjs from "@emailjs/browser";
 import { ModalWarning } from "../modalWarning/ModalWarning";
 import { Spinner } from "../spinner/Spinner";
+import { useTranslation } from "react-i18next";
 // import { motion } from "motion/react";
 
 type FormTypeProps = {
@@ -18,6 +19,7 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isColor, setIsColor] = useState<string | null>(null);
   const [spinner, setSpinner] = useState(false);
+  const { t } = useTranslation();
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -39,17 +41,21 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
         () => {
           setSpinner(false);
           setIsModalOpen(true);
-          setTitleMessage("SUCSSES!");
-          setWarningMessage("Your message has been sent!");
+          setTitleMessage(t("components.modalWarning.titleMessage.success"));
+          setWarningMessage(
+            t("components.modalWarning.warningMessage.success"),
+          );
           setIsColor("green");
         },
         (error) => {
           setSpinner(false);
           setIsModalOpen(true);
-          setTitleMessage("FAILD!");
-          setWarningMessage(`Your message was not sent! ${error.text}`);
+          setTitleMessage(t("components.modalWarning.titleMessage.failed"));
+          setWarningMessage(
+            `${t("components.modalWarning.warningMessage.failed")} ${error.text}`,
+          );
           setIsColor("red");
-        }
+        },
       );
     (e.target as HTMLFormElement).reset();
   };
@@ -79,7 +85,9 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
                 placeholder="Name"
                 name="user_name"
               />
-              <S.Label htmlFor="Name">Name</S.Label>
+              <S.Label htmlFor="Name">
+                {t("components.contactForm.form.name")}
+              </S.Label>
             </S.PlaceholderBox>
             <S.PlaceholderBox>
               <S.Field
@@ -89,7 +97,9 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
                 placeholder="Email"
                 name="email"
               />
-              <S.Label htmlFor="Email">Email</S.Label>
+              <S.Label htmlFor="Email">
+                {t("components.contactForm.form.email")}
+              </S.Label>
             </S.PlaceholderBox>
           </S.FieldDiv>
 
@@ -101,7 +111,9 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
               placeholder="Title"
               name="title"
             />
-            <S.Label htmlFor="Title">Title</S.Label>
+            <S.Label htmlFor="Title">
+              {t("components.contactForm.form.title")}
+            </S.Label>
           </S.PlaceholderBox>
 
           <S.PlaceholderBox>
@@ -112,10 +124,12 @@ export const ContactForm: React.FC<FormTypeProps> = (props: FormTypeProps) => {
               placeholder="Message"
               name="message"
             />
-            <S.Label htmlFor="Message">Message</S.Label>
+            <S.Label htmlFor="Message">
+              {t("components.contactForm.form.message")}
+            </S.Label>
           </S.PlaceholderBox>
 
-          <Button type="submit">Send</Button>
+          <Button type="submit">{t("global.buttons.send")}</Button>
         </S.StyledForm>
       </S.StyledFormPage>
     </S.StyledContactForm>

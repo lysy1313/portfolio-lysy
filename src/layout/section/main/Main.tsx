@@ -9,9 +9,11 @@ import { ContactForm } from "../../../components/contactForm/ContactForm";
 import { S } from "./Main_Styles";
 import Typewriter from "typewriter-effect";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 export const Main: React.FC = () => {
   const [contactMenuOpen, setContactMenuOpen] = useState<boolean | null>(null);
+  const { t } = useTranslation();
 
   const handleToggle = () => {
     if (contactMenuOpen === null) {
@@ -55,22 +57,29 @@ export const Main: React.FC = () => {
               gap="0px"
             >
               <h1>
-                Lysy is a <S.StyledStrong>web designer</S.StyledStrong> and{" "}
-                <S.StyledStrong>front-end</S.StyledStrong> developer
+                {t("sections.main.mainTitle.firstPart")}
+                <S.StyledStrong>
+                  {t("sections.main.mainTitle.foundPart")}
+                </S.StyledStrong>
+                {t("sections.main.mainTitle.thirdPart")}{" "}
+                <S.StyledStrong>
+                  {t("sections.main.mainTitle.fourPart")}
+                </S.StyledStrong>
+                {t("sections.main.mainTitle.fivePart")}
               </h1>
 
-              <p>
+              <div className="typewriter-wrapper">
                 <Typewriter
                   options={{
-                    strings: [
-                      "He crafts responsive websites where technologies meet creativity",
-                    ],
+                    strings: [t("sections.main.paragraph")],
                     autoStart: true,
                     loop: true,
                   }}
                 />
-              </p>
-              <Button onClick={handleToggle}>Contact me!!!</Button>
+              </div>
+              <Button onClick={handleToggle}>
+                {t("global.buttons.contactMe")}
+              </Button>
             </FlexWrapper>
           </S.StyledDiv>
 
@@ -98,7 +107,10 @@ export const Main: React.FC = () => {
               <S.ParDiv>
                 <S.Square></S.Square>
                 <p>
-                  Currently working on <strong>Portfolio</strong>
+                  {t("sections.main.paragraphAfterPhoto.firstPart")}{" "}
+                  <strong>
+                    {t("sections.main.paragraphAfterPhoto.foundPart")}
+                  </strong>
                 </p>
               </S.ParDiv>
             </Fade>
@@ -120,9 +132,7 @@ export const Main: React.FC = () => {
                   viewBox="0 0 40 30"
                 />
               </S.IconLeft>
-              <S.TextQuote>
-                With great power comes great electricity bill
-              </S.TextQuote>
+              <S.TextQuote>{t("sections.main.fieldSet.textQuote")}</S.TextQuote>
             </S.StyledFieldSet>
             <S.StyledFieldSet>
               <S.IconRight>
@@ -133,7 +143,9 @@ export const Main: React.FC = () => {
                   viewBox="0 0 40 30"
                 />
               </S.IconRight>
-              <S.NameTextQuote>- Dr. Who</S.NameTextQuote>
+              <S.NameTextQuote>
+                {t("sections.main.fieldSet.name")}
+              </S.NameTextQuote>
             </S.StyledFieldSet>
           </FlexWrapper>
         </FlexWrapper>

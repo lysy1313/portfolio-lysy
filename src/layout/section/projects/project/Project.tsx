@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledLinkBtn } from "../../../../components/LinkBtn";
 import { S } from "../Projects_Styles";
+import { useTranslation } from "react-i18next";
 
 type ProjectPropsItemsType = {
   cartImg?: string;
@@ -12,8 +13,9 @@ type ProjectPropsItemsType = {
 };
 
 export const Project: React.FC<ProjectPropsItemsType> = (
-  props: ProjectPropsItemsType
+  props: ProjectPropsItemsType,
 ) => {
+  const { t } = useTranslation();
   return (
     <S.StyledProject>
       <S.Img src={props.cartImg} />
@@ -22,20 +24,16 @@ export const Project: React.FC<ProjectPropsItemsType> = (
         <S.StyledH4>{props.headline}</S.StyledH4>
         <S.Parag>{props.textParag}</S.Parag>
         <div className="divBtn">
-          {props.linkLive != null ? (
-            <StyledLinkBtn href={props.linkLive} primary={true}>
-              Live &lt;~&gt;
+          {props.linkLive !== null && (
+            <StyledLinkBtn href={props.linkLive} $primary>
+              {t("global.links.live")} &lt;~&gt;
             </StyledLinkBtn>
-          ) : (
-            false
           )}
 
-          {props.linkCached != null ? (
-            <StyledLinkBtn href={props.linkCached} outlined={true}>
-              Cached &#x2265;
+          {props.linkCached !== null && (
+            <StyledLinkBtn href={props.linkCached} $outlined>
+              {t("global.links.github")} &#x2265;
             </StyledLinkBtn>
-          ) : (
-            false
           )}
         </div>
       </div>

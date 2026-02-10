@@ -1,4 +1,6 @@
+// FragmentAboutMe.tsx
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { S } from "../AboutMe_Styles";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { StyledLinkBtn } from "../../../../components/LinkBtn";
@@ -15,8 +17,10 @@ type FragmentAboutMeTypeProps = {
 };
 
 export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
-  props: FragmentAboutMeTypeProps
+  props: FragmentAboutMeTypeProps,
 ) => {
+  const { t } = useTranslation(); // Хук для перевода
+
   return (
     <StyledFragmentAboutMe>
       <FlexWrapper
@@ -33,22 +37,22 @@ export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
         >
           <Fade cascade={true} damping={-0.1} direction="left">
             <S.TextAbout>
-              Hello, i’m Lysy! <br />
+              {t("pages.fragmentAboutMe.aboutMe.hello")} <br />
               <br />
-              I’m a self-taught front-end developer based in Minsk, Belarus. I
-              can develop responsive websites from scratch and raise them into
-              modern user-friendly web experiences. <br />
+              {t("pages.fragmentAboutMe.aboutMe.description1")} <br />
               <br />
-              Transforming my creativity and knowledge into a websites has been
-              my passion for over a year. I always strive to learn about the
-              newest technologies and frameworks.
+              {t("pages.fragmentAboutMe.aboutMe.description2")} <br />
+              <br />
+              {t("pages.fragmentAboutMe.aboutMe.passion")}
             </S.TextAbout>
             {props.displayTrue ? (
               <Link
                 to={"/portfolio-lysy/about-me"}
                 onClick={() => animateScroll.scrollToTop()}
               >
-                <StyledLinkBtn primary>Read more &rarr;</StyledLinkBtn>
+                <StyledLinkBtn primary>
+                  {t("pages.fragmentAboutMe.buttons.readMore")} &rarr;
+                </StyledLinkBtn>
               </Link>
             ) : (
               false
@@ -57,9 +61,18 @@ export const FragmentAboutMe: React.FC<FragmentAboutMeTypeProps> = (
         </FlexWrapper>
         <Fade cascade={true} damping={0.1} direction="right">
           <S.ImgDiv>
-            <S.Dots src={dotsImg} alt="Мужик с закрытым лицом" />
-            <S.ImgMan src={imgMan2} alt="Мужик с закрытым лицом" />
-            <S.MiniDots src={miniDotsImg} alt="Мужик с закрытым лицом" />
+            <S.Dots
+              src={dotsImg}
+              alt={t("pages.fragmentAboutMe.altText.dots")}
+            />
+            <S.ImgMan
+              src={imgMan2}
+              alt={t("pages.fragmentAboutMe.altText.man")}
+            />
+            <S.MiniDots
+              src={miniDotsImg}
+              alt={t("pages.fragmentAboutMe.altText.miniDots")}
+            />
           </S.ImgDiv>
         </Fade>
       </FlexWrapper>

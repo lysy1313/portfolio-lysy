@@ -1,0 +1,11 @@
+export { default as global } from "./global.json";
+export { default as contactForm } from "./components/contactForm.json";
+export { default as modalWarning } from "./components/modalWarning.json";
+export { default as aboutMe } from "./pages/aboutMe.json";
+export { default as contact } from "./pages/contact.json";
+export { default as footer } from "./pages/footer.json";
+export { default as fragmentAboutMe } from "./pages/fragmentAboutMe.json";
+export { default as header } from "./pages/header.json";
+export { default as main } from "./sections/main.json";
+export { default as projectsSections } from "./sections/projects.json";
+export { default as skills } from "./sections/skills.json";

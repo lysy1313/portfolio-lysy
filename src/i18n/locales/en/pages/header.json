@@ -1,0 +1,8 @@
+{
+  "navigation": {
+    "home": "home",
+    "works": "works",
+    "about-me": "about-me",
+    "contacts": "contacts"
+  }
+}

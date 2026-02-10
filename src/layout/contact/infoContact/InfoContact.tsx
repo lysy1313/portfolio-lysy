@@ -5,8 +5,10 @@ import { S } from "../../section/contacts/Contacts_Styles";
 import { Icon } from "../../../components/icon/Icon";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/theme";
+import { useTranslation } from "react-i18next";
 
 export const InfoContact: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <StyledInfoContact>
       <Container>
@@ -17,15 +19,14 @@ export const InfoContact: React.FC = () => {
           gap="16px"
         >
           <FlexWrapper justify="flex-start" align="flex-start">
-            <S.TextContacts>
-              I’m interested in freelance opportunities. However, if you have
-              other request or question, don’t hesitate to contact me
-            </S.TextContacts>
+            <S.TextContacts>{t("pages.contact.textContacts")}</S.TextContacts>
           </FlexWrapper>
 
           <FlexWrapper wrap="wrap">
             <S.MessagePage>
-              <S.MessageText>Support me here</S.MessageText>
+              <S.MessageText>
+                {t("pages.contact.messageText.support")}
+              </S.MessageText>
               <S.Message>
                 <S.TextAdress>
                   <a href="">4149500120690030</a>
@@ -33,7 +34,9 @@ export const InfoContact: React.FC = () => {
               </S.Message>
             </S.MessagePage>
             <S.MessagePage>
-              <S.MessageText>Message me here</S.MessageText>
+              <S.MessageText>
+                {t("pages.contact.messageText.message")}
+              </S.MessageText>
               <S.Message>
                 <S.TextAdress>
                   <a href="">

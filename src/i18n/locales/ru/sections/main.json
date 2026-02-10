@@ -1,0 +1,18 @@
+{
+  "mainTitle": {
+    "firstPart": "Lysy — это ",
+    "foundPart": "веб-дизайнер",
+    "thirdPart": " и ",
+    "fourPart": "фронтенд",
+    "fivePart": "-разработчик"
+  },
+  "paragraph": "Он создаёт адаптивные веб-сайты, где технологии встречаются с креативностью",
+  "paragraphAfterPhoto": {
+    "firstPart": "В настоящее время работает над",
+    "foundPart": "TODO"
+  },
+  "fieldSet": {
+    "textQuote": "С великой силой приходит и большой счёт за электричество",
+    "name": "— Доктор Кто"
+  }
+}

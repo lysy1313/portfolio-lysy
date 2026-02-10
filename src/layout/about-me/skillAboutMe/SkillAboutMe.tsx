@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledSkillCart } from "../../section/skills/Skill_Styles";
-import { theme } from "../../../styles/theme";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
+import { theme } from "../../../styles/theme";
+import { useSkillsData } from "../../section/skills/model/useSkillsData";
 import { SkillCart } from "../../section/skills/skill/SkillCart";
-import { skillsData } from "../../section/skills/Skills";
+import { StyledSkillCart } from "../../section/skills/Skill_Styles";
 
 export const SkillAboutMe: React.FC = () => {
+  const { skillsData, t } = useSkillsData();
   return (
     <StyledSkillAboutMe>
       <Container>
-        <SectionTitle textTitle="skills" hightLine="0" />
+        <SectionTitle
+          textTitle={t("global.titleSection.skills")}
+          hightLine="0"
+        />
         <SkillCart skillData={skillsData} />
       </Container>
     </StyledSkillAboutMe>

@@ -2,17 +2,15 @@ import styled, { css } from "styled-components";
 import { theme } from "../styles/theme";
 
 type LinkBtnPropsType = {
-  primary?: boolean;
-  outlined?: boolean;
-  // linkDisplayPrimary?: string;
-  // linkDisplayOutlined?: string;
+  $primary?: boolean;
+  $outlined?: boolean;
 };
 
 export const StyledLinkBtn = styled.a<LinkBtnPropsType>`
   padding: 8px 16px;
 
   ${(props) =>
-    props.outlined &&
+    props.$outlined &&
     css<LinkBtnPropsType>`
       border: 1px solid ${theme.colors.seconderyFont};
       color: ${theme.colors.seconderyFont};
@@ -24,7 +22,7 @@ export const StyledLinkBtn = styled.a<LinkBtnPropsType>`
     `}
 
   ${(props) =>
-    props.primary &&
+    props.$primary &&
     css<LinkBtnPropsType>`
       border: 1px solid ${theme.colors.accent};
       color: #fff;

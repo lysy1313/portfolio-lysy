@@ -4,8 +4,10 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 import { Icon } from "../../components/icon/Icon";
 import React from "react";
 import { S } from "./Footer_Styles";
+import { useTranslation } from "react-i18next";
 
 export const Footer: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <S.StyledFooter>
       <Container>
@@ -13,14 +15,14 @@ export const Footer: React.FC = () => {
           <FlexWrapper justify="space-between" align="center" wrap="wrap">
             <S.FooterLogo>
               <Logo />
-              <p>elias@elias-dev.ml</p>
-              <h3>Web designer and front-end developer</h3>
+              <p>lysy.ilya1313@gmail.com</p>
+              <h3>{t("pages.footer.textLogo")}</h3>
             </S.FooterLogo>
             <S.FooterMedia>
-              <h4>Media</h4>
+              <h4>{t("pages.footer.media")}</h4>
               <ul>
                 <li>
-                  <a>
+                  <a href="https://github.com/lysy1313">
                     <Icon
                       height="32px"
                       width="32px"
@@ -30,7 +32,7 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="https://t.me/lysy_I">
                     <Icon
                       height="32px"
                       width="32px"
@@ -40,7 +42,7 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="https://discord.com/channels/660813608757886991">
                     <Icon
                       height="32px"
                       width="32px"
@@ -52,7 +54,7 @@ export const Footer: React.FC = () => {
               </ul>
             </S.FooterMedia>
           </FlexWrapper>
-          <S.Copyright>© Copyright 2025. Made by Lysy</S.Copyright>
+          <S.Copyright>© {t("pages.footer.copyright")} Lysy</S.Copyright>
         </FlexWrapper>
       </Container>
     </S.StyledFooter>

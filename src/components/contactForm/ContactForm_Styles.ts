@@ -61,7 +61,8 @@ const StyledFormPage = styled.div`
   flex-direction: column;
 
   border: 1px solid ${theme.colors.accent};
-  box-shadow: 0 20px 40px rgba(199, 120, 221, 0.2),
+  box-shadow:
+    0 20px 40px rgba(199, 120, 221, 0.2),
     0 5px 15px rgba(199, 120, 221, 0.1);
 
   padding: 20px 15px;
@@ -121,7 +122,7 @@ const StyledForm = styled.form`
   margin: 0 auto;
 
   button {
-    max-width: 71px;
+    max-width: 120px;
   }
 
   textarea {

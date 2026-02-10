@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "send": "Send",
+    "contactMe": "Contact me!!!"
+  },
+  "links": {
+    "viewAll": "View all",
+    "live": "Live",
+    "github": "Github"
+  },
+  "titlePage": {
+    "aboutMePage": {
+      "textTitlePage": "Who am i?",
+      "titlePage": "about-me"
+    },
+    "contactPage": {
+      "textTitlePage": "Who am i?",
+      "titlePage": "contacts"
+    },
+    "projectsAll": {
+      "textTitlePage": "List of my projects",
+      "titlePage": "projects"
+    }
+  },
+  "titleSection": {
+    "skills": "skills",
+    "funFacts": "my-fun-facts",
+    "allMedia": "all-media",
+    "completedApps": "completed-apps",
+    "smallProjects": "small-projects",
+    "aboutMe": "about-me",
+    "contacts": "contacts",
+    "projects": "projects"
+  }
+}

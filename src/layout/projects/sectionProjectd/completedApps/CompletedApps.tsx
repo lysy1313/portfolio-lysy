@@ -1,18 +1,22 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import styled from "styled-components";
-import { SectionTitle } from "../../../../components/sectionTitle/SectionTitle";
 import { Container } from "../../../../components/Container";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { projectItems } from "../../../section/projects/Projects";
-import { Project } from "../../../section/projects/project/Project";
+import { SectionTitle } from "../../../../components/sectionTitle/SectionTitle";
 import { theme } from "../../../../styles/theme";
-import { Fade } from "react-awesome-reveal";
+import { useProjectsData } from "../../../section/projects/model/useProjectsData";
+import { Project } from "../../../section/projects/project/Project";
 
 export const CompletedApps: React.FC = () => {
+  const { projectItems, t } = useProjectsData();
   return (
     <StyledCompletedApps>
       <Container>
-        <SectionTitle textTitle="completed-apps" hightLine="0" />
+        <SectionTitle
+          textTitle={t("global.titleSection.completedApps")}
+          hightLine="0"
+        />
         <FlexWrapper align="start" wrap="wrap">
           <Fade cascade={true} damping={0.1}>
             {projectItems.map((proj, index: number) => {

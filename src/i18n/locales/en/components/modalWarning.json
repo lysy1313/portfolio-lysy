@@ -1,0 +1,11 @@
+{
+  "actionText": "Click on the window to close.",
+  "titleMessage": {
+    "success": "SUCSSESS!",
+    "failed": "FAILED!"
+  },
+  "warningMessage": {
+    "success": "Your message has been sent!",
+    "failed": "Your message was not sent!"
+  }
+}

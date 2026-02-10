@@ -1,0 +1,9 @@
+{
+  "category": {
+    "languages": "Languages",
+    "databases": "Databases",
+    "tools": "Tools",
+    "other": "Other",
+    "frameworks": "Frameworks"
+  }
+}

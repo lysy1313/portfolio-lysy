@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./layout/footer/Footer";
 import { Header } from "./layout/header/Header";
@@ -17,6 +17,7 @@ function App() {
         <Route path="/portfolio-lysy/works" element={<ProjectsAll />} />
         <Route path="/portfolio-lysy/about-me" element={<AboutMePage />} />
         <Route path="/portfolio-lysy/contacts" element={<ContactPage />} />
+        <Route path="/*" element={<Navigate to={"/portfolio-lysy/"} />} />
       </Routes>
       <Footer />
       <GoTopBtn />

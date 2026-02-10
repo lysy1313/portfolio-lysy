@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "send": "Отправить",
+    "contactMe": "Связаться со мной!"
+  },
+  "links": {
+    "viewAll": "Посмотреть все",
+    "live": "Демо",
+    "github": "GitHub"
+  },
+  "titlePage": {
+    "aboutMePage": {
+      "textTitlePage": "Кто я?",
+      "titlePage": "обо-мне"
+    },
+    "contactPage": {
+      "textTitlePage": "Кто я?",
+      "titlePage": "контакты"
+    },
+    "projectsAll": {
+      "textTitlePage": "Список моих проектов",
+      "titlePage": "проекты"
+    }
+  },
+  "titleSection": {
+    "skills": "Навыки",
+    "funFacts": "Интересные факты",
+    "allMedia": "Все социальные сети",
+    "completedApps": "Завершённые приложения",
+    "smallProjects": "Небольшие проекты",
+    "aboutMe": "Обо мне",
+    "contacts": "Контакты",
+    "projects": "Проекты"
+  }
+}

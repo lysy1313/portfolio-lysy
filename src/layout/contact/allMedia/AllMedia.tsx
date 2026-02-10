@@ -4,12 +4,17 @@ import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
 import { Container } from "../../../components/Container";
 import { S } from "../../section/contacts/Contacts_Styles";
 import { Icon } from "../../../components/icon/Icon";
+import { useTranslation } from "react-i18next";
 
 export const AllMedia: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <StyledAllMedia>
       <Container>
-        <SectionTitle textTitle="all-media" hightLine="0" />
+        <SectionTitle
+          textTitle={t("global.titleSection.allMedia")}
+          hightLine="0"
+        />
         <S.Message>
           <S.TextAdress>
             <a href="">

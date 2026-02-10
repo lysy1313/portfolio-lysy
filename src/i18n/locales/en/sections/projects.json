@@ -1,0 +1,12 @@
+{
+  "projectItems": {
+    "shop": {
+      "textParag": "Shop with basket",
+      "headline": "Shop"
+    },
+    "portfolio": {
+      "textParag": "You’re using it run",
+      "headline": "Portfolio"
+    }
+  }
+}

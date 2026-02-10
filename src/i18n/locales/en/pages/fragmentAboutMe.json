@@ -1,0 +1,16 @@
+{
+  "aboutMe": {
+    "hello": "Hello, i’m Lysy!",
+    "description1": "I’m a self-taught front-end developer based in Minsk, Belarus. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.",
+    "description2": "Transforming my creativity and knowledge into websites has been my passion for over a year.",
+    "passion": "I always strive to learn about the newest technologies and frameworks."
+  },
+  "buttons": {
+    "readMore": "Read more"
+  },
+  "altText": {
+    "dots": "Decorative dots",
+    "man": "Man with closed face",
+    "miniDots": "Small decorative dots"
+  }
+}

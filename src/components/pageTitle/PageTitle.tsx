@@ -8,9 +8,7 @@ type PageTitlePropsType = {
   textTitlePage: string;
 };
 
-export const PageTitle: React.FC<PageTitlePropsType> = (
-  props: PageTitlePropsType
-) => {
+export const PageTitle: React.FC<PageTitlePropsType> = (props) => {
   return (
     <StyledPageTitle>
       <Container>

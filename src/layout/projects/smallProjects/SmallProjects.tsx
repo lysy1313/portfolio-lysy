@@ -6,6 +6,7 @@ import { Project } from "../../section/projects/project/Project";
 import { S } from "../../section/projects/Projects_Styles";
 import { theme } from "../../../styles/theme";
 import { Fade } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 
 const smallProjectItems = [
   {
@@ -61,10 +62,14 @@ const smallProjectItems = [
 ];
 
 export const SmallProjects: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <StyledSmallProjects>
       <Container>
-        <SectionTitle textTitle="small-projects" hightLine="0" />
+        <SectionTitle
+          textTitle={t("global.titleSection.smallProjects")}
+          hightLine="0"
+        />
         <GridSmallProjects>
           <Fade
             cascade={true}
@@ -74,15 +79,14 @@ export const SmallProjects: React.FC = () => {
           >
             {smallProjectItems.map((smProj, index: number) => {
               return (
-                <SallPoject>
+                <div key={index}>
                   <Project
-                    key={index}
                     textTopic={smProj.textTopic}
                     headline={smProj.headline}
                     textParag={smProj.textParag}
                     linkLive={smProj.linkLive}
                   />
-                </SallPoject>
+                </div>
               );
             })}
           </Fade>
@@ -107,4 +111,3 @@ const GridSmallProjects = styled.div`
     justify-content: space-around;
   }
 `;
-const SallPoject = styled.div``;
