@@ -19,11 +19,13 @@ export const Project: React.FC<ProjectPropsItemsType> = (
   return (
     <S.StyledProject>
       <S.Img src={props.cartImg} />
-      <S.ListTopic>{props.textTopic}</S.ListTopic>
-      <div>
+      <S.ListTopicWrapper>
+        <S.ListTopic>{props.textTopic}</S.ListTopic>
+      </S.ListTopicWrapper>
+      <S.InfoWrapper>
         <S.StyledH4>{props.headline}</S.StyledH4>
         <S.Parag>{props.textParag}</S.Parag>
-        <div className="divBtn">
+        <S.BtnWrapper>
           {props.linkLive !== null && (
             <StyledLinkBtn href={props.linkLive} $primary>
               {t("global.links.live")} &lt;~&gt;
@@ -35,8 +37,8 @@ export const Project: React.FC<ProjectPropsItemsType> = (
               {t("global.links.github")} &#x2265;
             </StyledLinkBtn>
           )}
-        </div>
-      </div>
+        </S.BtnWrapper>
+      </S.InfoWrapper>
     </S.StyledProject>
   );
 };

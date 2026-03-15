@@ -63,23 +63,6 @@ const StyledProject = styled.div`
   max-width: 330px;
   width: 100%;
   border: 0.5px solid ${theme.colors.seconderyFont};
-
-  div {
-    border-top: 0.5px solid ${theme.colors.seconderyFont};
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .divBtn {
-    display: flex;
-    flex-direction: row;
-    border: none;
-    padding: 0;
-  }
 `;
 
 const Img = styled.img`
@@ -88,10 +71,25 @@ const Img = styled.img`
   object-fit: cover;
   border-bottom: 0.5px solid ${theme.colors.seconderyFont};
 `;
-const ListTopic = styled.p`
-  text-align: start;
-  line-height: 30px;
+const ListTopicWrapper = styled.div`
+  height: 60px;
   padding: 0 8px 2px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+`;
+const ListTopic = styled.p`
+  line-height: 30px;
+`;
+const InfoWrapper = styled.div`
+  height: 205px;
+  border-top: 0.5px solid ${theme.colors.seconderyFont};
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
 `;
 const Parag = styled.p`
   letter-spacing: 0;
@@ -100,6 +98,13 @@ const Parag = styled.p`
 const StyledH4 = styled.h4`
   font-weight: 500;
   font-size: 24px;
+`;
+const BtnWrapper = styled.div`
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
 `;
 
 export const S = {
@@ -111,4 +116,7 @@ export const S = {
   ListTopic,
   Parag,
   StyledH4,
+  InfoWrapper,
+  ListTopicWrapper,
+  BtnWrapper,
 };

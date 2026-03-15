@@ -72,7 +72,6 @@ export const GlobalStyled = createGlobalStyle`
 
         font-size: 16px;
         color: ${theme.colors.seconderyFont};
-        /* line-height: 100%; */
     }
 
     .Typewriter__wrapper{

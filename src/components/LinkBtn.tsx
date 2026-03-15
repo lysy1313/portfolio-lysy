@@ -7,7 +7,9 @@ type LinkBtnPropsType = {
 };
 
 export const StyledLinkBtn = styled.a<LinkBtnPropsType>`
+  width: 200px;
   padding: 8px 16px;
+  text-align: center;
 
   ${(props) =>
     props.$outlined &&
