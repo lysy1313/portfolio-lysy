@@ -4,9 +4,10 @@ import { theme } from "../../../styles/theme";
 import dotsWidthImg from "../../../assets/images/DotsWidth.svg";
 
 const StyledAboutMe = styled.section`
-  @media ${theme.media.tablet} {
+  @media screen and (max-width: 887px) {
     ${FlexWrapper} {
       justify-content: center;
+      gap: 20px;
     }
   }
 `;

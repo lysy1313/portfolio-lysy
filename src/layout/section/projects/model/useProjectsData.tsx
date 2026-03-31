@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
 
-import chertImg from "../../../../assets/images/Chert.jpg";
+import tmdbImg from "../../../../assets/images/TMDB.png";
 import shopImg from "../../../../assets/images/Shop.png";
-import kahootImg from "../../../../assets/images/Kahoot.jpg";
-import botImg from "../../../../assets/images/bot.jpg";
+import todoImg from "../../../../assets/images/TODO.png";
 import eliasImg from "../../../../assets/images/elis.jpg";
 
 export const useProjectsData = () => {
@@ -11,10 +10,28 @@ export const useProjectsData = () => {
 
   const projectItems = [
     {
+      cartImg: tmdbImg,
+      headline: t("sections.projects.projectItems.tmdb.headline"),
+      textParag: t("sections.projects.projectItems.tmdb.textParag"),
+      textTopic:
+        "React TS HTML SCSS RTK RTK-Query React-Router Zod React-toastify",
+      linkCached: "https://github.com/lysy1313/tmdb-kinopoisk-lysy",
+      linkLive: "https://tmdb-kinopoisk-lysy.vercel.app/",
+    },
+
+    {
+      cartImg: todoImg,
+      headline: t("sections.projects.projectItems.todo.headline"),
+      textParag: t("sections.projects.projectItems.todo.textParag"),
+      textTopic: "React TS HTML MUI RTK-Query Zod React-Router React-Hook-Form",
+      linkCached: "https://github.com/lysy1313/todolist",
+      linkLive: "https://todolist-indol-ten-37.vercel.app/",
+    },
+    {
       cartImg: shopImg,
       headline: t("sections.projects.projectItems.shop.headline"),
       textParag: t("sections.projects.projectItems.shop.textParag"),
-      textTopic: "React HTML SCSS Redux React-Router",
+      textTopic: "React TS HTML SCSS Redux React-Router",
       linkCached:
         "https://github.com/lysy1313/product-catalog-with-shopping-cart",
       linkLive:
@@ -27,29 +44,6 @@ export const useProjectsData = () => {
       textTopic: "React TS Styled-component i18next EmailJS",
       linkCached: "https://github.com/lysy1313/portfolio-lysy",
       linkLive: "/",
-    },
-    {
-      cartImg: chertImg,
-      headline: "ChertNodes(Fake)",
-      textParag: "Minecraft servers hosting",
-      textTopic: "HTML SCSS Python Flask",
-      linkCached: "#",
-      linkLive: "#",
-    },
-
-    {
-      cartImg: kahootImg,
-      headline: "Kahoot Answers Viewer(Fake)",
-      textParag: "Get answers to your kahoot quiz",
-      textTopic: "HTML SCSS Python Flask",
-      linkCached: "#",
-    },
-    {
-      cartImg: botImg,
-      headline: "Kotik Bot(Fake)",
-      textParag: "Multi-functional discord bot",
-      textTopic: "HTML CSS JS",
-      linkLive: "",
     },
   ];
 

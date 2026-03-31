@@ -21,7 +21,14 @@ export const useSkillsData = () => {
     },
     {
       category: t("sections.skills.category.frameworks"),
-      list: ["React"],
+      list: [
+        "React",
+        "RTK",
+        "RTK-Query",
+        "React-Router",
+        "React-Hook-Form",
+        "Zod",
+      ],
     },
   ];
 

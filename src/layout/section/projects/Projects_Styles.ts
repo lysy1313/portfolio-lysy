@@ -82,7 +82,7 @@ const ListTopic = styled.p`
   line-height: 30px;
 `;
 const InfoWrapper = styled.div`
-  height: 205px;
+  height: 155px;
   border-top: 0.5px solid ${theme.colors.seconderyFont};
   padding: 15px;
   display: flex;

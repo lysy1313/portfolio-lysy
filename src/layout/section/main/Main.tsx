@@ -59,10 +59,6 @@ export const Main: React.FC = () => {
               <h1>
                 {t("sections.main.mainTitle.firstPart")}
                 <S.StyledStrong>
-                  {t("sections.main.mainTitle.foundPart")}
-                </S.StyledStrong>
-                {t("sections.main.mainTitle.thirdPart")}{" "}
-                <S.StyledStrong>
                   {t("sections.main.mainTitle.fourPart")}
                 </S.StyledStrong>
                 {t("sections.main.mainTitle.fivePart")}

@@ -7,6 +7,14 @@
     "portfolio": {
       "textParag": "You’re using it run",
       "headline": "Portfolio"
+    },
+    "tmdb": {
+      "textParag": "Modern movie and TV search web app",
+      "headline": "TMDB Kinopoisk"
+    },
+    "todo": {
+      "textParag": "Clean task manager with categories and filters",
+      "headline": "Todolist"
     }
   }
 }
